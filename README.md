@@ -166,13 +166,14 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 
 #### 프로토타입
 ```c
-
+size_t	strlen(const char *s);
 ```
 
 #### 설명
-문자열의 길이를 구해줍니다.
-#### 반환 값
+문자열 **s**의 길이를 구합니다.
 
+#### 반환 값
+문자열 **s**의 길이
 
 ---
 
