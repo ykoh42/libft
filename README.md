@@ -113,7 +113,7 @@ void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 
 #### 설명
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
-절대 **src**와 **dst**의 메모리 영역이 겹쳐서는 안됩니다.
+절대 **src**와 **dst**의 메모리 영역이 **겹쳐서는 안됩니다**.
 #### 반환 값
 복사된 메모리 영역 dst의 다음 포인터(+1)
 #### Ussage
@@ -131,29 +131,38 @@ void    *memmove(void *dst, const void *src, size_t len);
 ```
 
 #### 설명
-
+메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
+memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사용합니다.
 #### 반환 값
-
+메모리 영역 **dst**
 #### Ussage
+메모리 영역을 **len**만큼 복사할 때
+**src**와 **dst**의 메모리 영역이 겹칠 때
+
 ---
 
 ### ft_memcmp
-> 
+> memory compare 
 
 #### 프로토타입
 ```c
-
+int    memcmp(const void *s1, const void *s2, size_t n);
 ```
-
 #### 설명
-
+메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
 #### 반환 값
+**s1**이 크면 **양수**
+**s2**가 크면 **음수**
+같으면 **0**
 
+#### Ussage
+메모리 영역을 비교할 때
+정렬에서 비교가 필요할 때
 
 ---
 
 ### ft_strlen
-> 
+> string length
 
 #### 프로토타입
 ```c
@@ -161,7 +170,7 @@ void    *memmove(void *dst, const void *src, size_t len);
 ```
 
 #### 설명
-
+문자열의 길이를 구해줍니다.
 #### 반환 값
 
 
@@ -401,3 +410,5 @@ Part 2 - Additional functions는 libc에는 없지만, 유용한 함수들입니
 
 
 ---
+
+
