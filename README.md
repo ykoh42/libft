@@ -63,9 +63,9 @@ Coding convention은 42의 convention을 따라 작성되었으며, [*Libftest*]
 
 ---
 
-
 ### ft_memset
 > memory set
+
 **Prototype Declaration**  
 ```c
 void    *memset(void *b, int c, size_t len);
@@ -73,8 +73,11 @@ void    *memset(void *b, int c, size_t len);
 **Description**  
 메모리 영역 **b**의 **len** byte까지를 **c**로 초기화합니다.
 
+
 **Return**  
 메모리 영역 **b**의 포인터를 반환
+
+
 **Ussage**  
 메모리 영역을 특정 문자로 초기화할 때
 
@@ -87,12 +90,15 @@ void    *memset(void *b, int c, size_t len);
 ```c
 void    bzero(void *s, size_t n);
 ```
-
 **Description**  
 메모리 영역 **s**의 **n** bytes까지를 **0**으로 초기화합니다.
 초기화 용도로 사용되며, memset과 동일한 역할을 합니다.
+
+
 **Return**  
 없음
+
+
 **Ussage**  
 메모리 영역을 0으로 초기화할 때
 
@@ -105,12 +111,13 @@ void    bzero(void *s, size_t n);
 ```c
 void    *memchr(const void *s, int c, size_t n);
 ```
-
 **Description**  
 메모리 영역 **s**에서 문자 **c**가 **n** bytes영역에 존재하는지 검사합니다.
 
+
 **Return**  
 처음으로 값 **c**가 나타나는 포인터
+
 
 **Ussage**  
 메모리영역에서 값 **c**의 위치를 찾아낼 때
@@ -124,13 +131,16 @@ void    *memchr(const void *s, int c, size_t n);
 ```c
 void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```
-
 **Description**  
 메모리 영역 **src**의 **n** bytes만큼을 **dst**로 복사합니다.
 절대 src와 dst의 메모리 영역이 겹쳐서는 안됩니다.
 메모리 영역이 겹치면, memcpy 대신 memmove를 사용해야합니다.
+
+
 **Return**  
 메모리 영역 **dst**의 포인터를 반환
+
+
 **Ussage**  
 메모리영역을 **n**만큼 복사할 때
 
@@ -143,12 +153,15 @@ void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```c
 void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
-
 **Description**  
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
 절대 **src**와 **dst**의 메모리 영역이 **겹쳐서는 안됩니다**.
+
+
 **Return**  
 복사된 메모리 영역 dst의 다음 포인터(+1)
+
+
 **Ussage**  
 특정 문자까지만 복사하고 싶을 때(?)
 >:warning: 리턴 값은 어떻게 활용되는지 잘 모르겠습니다... 알려주세요.. 왜 리턴 값이 굳이 카피한 만큼의 다음 포인터일까요? 어떤 목적이 있을 것같긴한데..
@@ -162,12 +175,15 @@ void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```c
 void    *memmove(void *dst, const void *src, size_t len);
 ```
-
 **Description**  
 메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
 memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사용합니다.
+
+
 **Return**  
 메모리 영역 **dst**
+
+
 **Ussage**  
 메모리 영역을 **len**만큼 복사할 때
 **src**와 **dst**의 메모리 영역이 겹칠 때
@@ -183,10 +199,13 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 ```
 **Description**  
 메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
+
+
 **Return**  
 **s1**이 크면 **양수**
 **s2**가 크면 **음수**
 같으면 **0**
+
 
 **Ussage**  
 메모리 영역을 비교할 때
@@ -194,6 +213,7 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 
 ---
 
+여기까지
 ### ft_strlen
 > string length
 
@@ -201,16 +221,18 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 ```c
 size_t	strlen(const char *s);
 ```
-
 **Description**  
 문자열 **s**의 길이를 구합니다.
 
 **Return**  
 문자열 **s**의 길이
 
+
+**Ussage**  
+문자열의 길이를 알고 싶을 때
+
 ---
 
-여기까지 커밋
 ### ft_strnlen
 > string n length
 
@@ -218,12 +240,17 @@ size_t	strlen(const char *s);
 ```c
 size_t    strnlen(const char *s, size_t maxlen);
 ```
-
 **Description**  
 문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
 
+
 **Return**  
 문자열 **s**에서 **maxlen**까지의 길이
+
+
+**Ussage**  
+문자열의 길이를 **maxlen**까지만 알고 싶을 때
+
 
 ---
 
@@ -234,13 +261,14 @@ size_t    strnlen(const char *s, size_t maxlen);
 ```c
 size_t    strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
-
 **Description**  
 문자열 **src**에서 **dst**로 **dstsize** bytes 만큼 복사합니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcpy 입니다.
 
+
 **Return**  
 **src**의 길이(복사를 시도하려고 하는 길이)
+
 
 **Ussage**  
 문자열을 복사할 때
@@ -255,13 +283,14 @@ memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 ```c
 size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
-
 **Description**  
 문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다.
 
+
 **Return**  
 만드려고 시도했던 최종 문자열의 길이(?)
+
 
 **Ussage**  
 리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
