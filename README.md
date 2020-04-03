@@ -7,8 +7,42 @@ Coding convention은 42의 convention을 따라 작성되었으며, [*Libftest*]
 
 라이브러리가 무엇이고 왜 사용하는지에 대한 이해가 필요하시면 [*라이브러리 만들기*](https://www.joinc.co.kr/w/Site/C/Documents/Make_Library)를 참고해주세요.
 
-구성은 42의 Libft 프로젝트를 따르며, 아래와 같습니다.
 ## Contents
+- [Welcome to the Libft!](#welcome-to-the-libft-)
+  * [Contents](#contents)
+  * [Issues and pull requests](#issues-and-pull-requests)
+  * [Getting started](#getting-started)
+  * [MAKEFILE](#makefile)
+  * [Part 1 - Libc functions](#part-1---libc-functions)
+    + [ft_memset](#ft-memset)
+    + [ft_bzero](#ft-bzero)
+    + [ft_memchr](#ft-memchr)
+    + [ft_memcpy](#ft-memcpy)
+    + [ft_memccpy](#ft-memccpy)
+    + [ft_memmove](#ft-memmove)
+    + [ft_memcmp](#ft-memcmp)
+    + [ft_strlen](#ft-strlen)
+    + [ft_strnlen](#ft-strnlen)
+    + [ft_strlcpy](#ft-strlcpy)
+    + [ft_strlcat](#ft-strlcat)
+    + [ft_strchr](#ft-strchr)
+    + [ft_strrchr](#ft-strrchr)
+    + [ft_strnstr](#ft-strnstr)
+    + [ft_strncmp](#ft-strncmp)
+    + [ft_atoi](#ft-atoi)
+    + [ft_isalpha](#ft-isalpha)
+    + [ft_isdigit](#ft-isdigit)
+    + [ft_isalnum](#ft-isalnum)
+    + [ft_isascii](#ft-isascii)
+    + [ft_isprint](#ft-isprint)
+    + [ft_toupper](#ft-toupper)
+    + [ft_tolower](#ft-tolower)
+  * [Part 2 - Additional functions](#part-2---additional-functions)
+  * [BONUS](#bonus)
+  * [EXTRA](#extra)
+    + [ft_](#ft-)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ## Issues and pull requests
@@ -33,16 +67,16 @@ Coding convention은 42의 convention을 따라 작성되었으며, [*Libftest*]
 
 ### ft_memset
 > memory set
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void    *memset(void *b, int c, size_t len);
 ```
-#### Description
+**Description**
 메모리 영역 **b**의 **len** byte까지를 **c**로 초기화합니다.
 
-#### Return
+**Return**
 메모리 영역 **b**의 포인터를 반환
-#### Ussage
+**Ussage**
 메모리 영역을 특정 문자로 초기화할 때
 
 ---
@@ -50,17 +84,17 @@ void    *memset(void *b, int c, size_t len);
 ### ft_bzero
 > byte zero
 
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void    bzero(void *s, size_t n);
 ```
 
-#### 설명
+**Description**
 메모리 영역 **s**의 **n** bytes까지를 **0**으로 초기화합니다.
 초기화 용도로 사용되며, memset과 동일한 역할을 합니다.
-#### 반환 값
+**Return**
 없음
-#### Ussage
+**Ussage**
 메모리 영역을 0으로 초기화할 때
 
 ---
@@ -68,18 +102,18 @@ void    bzero(void *s, size_t n);
 ### ft_memchr
 > memory character
 
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void    *memchr(const void *s, int c, size_t n);
 ```
 
-#### Description
+**Description**
 메모리 영역 **s**에서 문자 **c**가 **n** bytes영역에 존재하는지 검사합니다.
 
-#### Return
+**Return**
 처음으로 값 **c**가 나타나는 포인터
 
-#### Ussage
+**Ussage**
 메모리영역에서 값 **c**의 위치를 찾아낼 때
 
 ---
@@ -87,36 +121,36 @@ void    *memchr(const void *s, int c, size_t n);
 ### ft_memcpy
 > memory copy
 
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```
 
-#### 설명
+**Description**
 메모리 영역 **src**의 **n** bytes만큼을 **dst**로 복사합니다.
 절대 src와 dst의 메모리 영역이 겹쳐서는 안됩니다.
 메모리 영역이 겹치면, memcpy 대신 memmove를 사용해야합니다.
-#### 반환 값
+**Return**
 메모리 영역 **dst**의 포인터를 반환
-#### Ussage
+**Ussage**
 메모리영역을 **n**만큼 복사할 때
 
 ---
-여기까지
+
 ### ft_memccpy
 > memory copy until **c** found
 
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
 
-#### 설명
+**Description**
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
 절대 **src**와 **dst**의 메모리 영역이 **겹쳐서는 안됩니다**.
-#### 반환 값
+**Return**
 복사된 메모리 영역 dst의 다음 포인터(+1)
-#### Ussage
+**Ussage**
 특정 문자까지만 복사하고 싶을 때(?)
 >:warning: 리턴 값은 어떻게 활용되는지 잘 모르겠습니다... 알려주세요.. 왜 리턴 값이 굳이 카피한 만큼의 다음 포인터일까요? 어떤 목적이 있을 것같긴한데..
 
@@ -125,17 +159,17 @@ void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ### ft_memmove
 > memory move
 
-#### Prototype Declaration
+**Prototype Declaration**
 ```c
 void    *memmove(void *dst, const void *src, size_t len);
 ```
 
-#### 설명
+**Description**
 메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
 memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사용합니다.
-#### 반환 값
+**Return**
 메모리 영역 **dst**
-#### Ussage
+**Ussage**
 메모리 영역을 **len**만큼 복사할 때
 **src**와 **dst**의 메모리 영역이 겹칠 때
 
@@ -144,18 +178,18 @@ memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사
 ### ft_memcmp
 > memory compare 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 int    memcmp(const void *s1, const void *s2, size_t n);
 ```
-#### 설명
+**Description**
 메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
-#### 반환 값
+**Return**
 **s1**이 크면 **양수**
 **s2**가 크면 **음수**
 같으면 **0**
 
-#### Ussage
+**Ussage**
 메모리 영역을 비교할 때
 정렬에서 비교가 필요할 때
 
@@ -164,60 +198,88 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 ### ft_strlen
 > string length
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 size_t	strlen(const char *s);
 ```
 
-#### 설명
+**Description**
 문자열 **s**의 길이를 구합니다.
 
-#### 반환 값
+**Return**
 문자열 **s**의 길이
 
 ---
 
-### ft_strlcpy
-> 
+여기까지 커밋
+### ft_strnlen
+> string n length
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
-
+size_t    strnlen(const char *s, size_t maxlen);
 ```
 
-#### 설명
+**Description**
+문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
 
-#### 반환 값
+**Return**
+문자열 **s**에서 **maxlen**까지의 길이
 
+---
+
+### ft_strlcpy
+> string l copy
+
+**Prototype Declaration**
+```c
+size_t    strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+```
+
+**Description**
+문자열 **src**에서 **dst**로 **dstsize** bytes 만큼 복사합니다.
+문자열 끝에 NUL문자(\0)가 보장된 strcpy 입니다.
+
+**Return**
+**src**의 길이(복사를 시도하려고 하는 길이)
+
+**Ussage**
+문자열을 복사할 때
+memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 
 ---
 
 ### ft_strlcat
-> 
+> string l cat
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
-
+size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
 
-#### 설명
+**Description**
+문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
+문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다.
 
-#### 반환 값
+**Return**
+만드려고 시도했던 최종 문자열의 길이(?)
 
+**Ussage**
+리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
 
 ---
 
 ### ft_strchr
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -225,28 +287,28 @@ size_t	strlen(const char *s);
 ### ft_strrchr
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 ---
 
 ### ft_strnstr
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -254,14 +316,14 @@ size_t	strlen(const char *s);
 ### ft_strncmp
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -269,14 +331,14 @@ size_t	strlen(const char *s);
 ### ft_atoi
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -284,14 +346,14 @@ size_t	strlen(const char *s);
 ### ft_isalpha
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -299,14 +361,14 @@ size_t	strlen(const char *s);
 ### ft_isdigit
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -314,14 +376,14 @@ size_t	strlen(const char *s);
 ### ft_isalnum
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -329,14 +391,14 @@ size_t	strlen(const char *s);
 ### ft_isascii
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -344,14 +406,14 @@ size_t	strlen(const char *s);
 ### ft_isprint
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -359,14 +421,14 @@ size_t	strlen(const char *s);
 ### ft_toupper
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -374,14 +436,14 @@ size_t	strlen(const char *s);
 ### ft_tolower
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
@@ -400,14 +462,14 @@ Part 2 - Additional functions는 libc에는 없지만, 유용한 함수들입니
 ### ft_
 > 
 
-#### 프로토타입
+**Prototype Declaration**
 ```c
 
 ```
 
-#### 설명
+**Description**
 
-#### 반환 값
+**Return**
 
 
 ---
