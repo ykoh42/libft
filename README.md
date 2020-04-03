@@ -112,8 +112,7 @@ void    bzero(void *s, size_t n);
 void    *memchr(const void *s, int c, size_t n);
 ```
 **Description**  
-메모리 영역 **s**에서 문자 **c**가 **n** bytes영역에 존재하는지 검사합니다.
-
+**n** bytes 까지의 메모리 영역 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 
 **Return**  
 처음으로 값 **c**가 나타나는 포인터
@@ -233,27 +232,6 @@ size_t	strlen(const char *s);
 
 ---
 
-### ft_strnlen
-> string n length
-
-**Prototype Declaration**  
-```c
-size_t    strnlen(const char *s, size_t maxlen);
-```
-**Description**  
-문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
-
-
-**Return**  
-문자열 **s**에서 **maxlen**까지의 길이
-
-
-**Ussage**  
-문자열의 길이를 **maxlen**까지만 알고 싶을 때
-
-
----
-
 ### ft_strlcpy
 > string l copy
 
@@ -285,7 +263,7 @@ size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 ```
 **Description**  
 문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
-문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다.
+문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다. (dstsize의 제일 마지막에 \0을 붙임)
 
 
 **Return**  
@@ -293,36 +271,43 @@ size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 
 
 **Ussage**  
-리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
+NUL이 보장되는 strcat이 필요할 때
+하지만, 리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
 
 ---
 
 ### ft_strchr
-> 
+> string chracter
 
 **Prototype Declaration**  
 ```c
-
+char    *strchr(const char *s, int c);
 ```
-
 **Description**  
+문자열 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
+**s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
 
 **Return**  
-
+문자 **c**가 처음 발견된 곳의 포인터
+문자열 **s**에 문자 **c**가 없으면 NULL 포인터
 
 ---
 
 ### ft_strrchr
-> 
+> string reverse(rear(?)) chr
 
 **Prototype Declaration**  
 ```c
-
+char    *strrchr(const char *s, int c);
 ```
-
 **Description**  
+문자열 **s**의 **뒤에서부터** 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
+**s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
+
 
 **Return**  
+뒤에서부터 문자 **c**가 처음 발견된 곳의 포인터
+문자열 **s**에 문자 **c**가 없으면 NULL 포인터
 
 ---
 
@@ -480,25 +465,26 @@ size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 Part 2 - Additional functions는 libc에는 없지만, 유용한 함수들입니다.
 
 ## BONUS
+
 ## EXTRA
 
-
-
-
-
-
-### ft_
-> 
+### ft_strnlen
+> string n length
 
 **Prototype Declaration**  
 ```c
-
+size_t    strnlen(const char *s, size_t maxlen);
 ```
-
 **Description**  
+문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
+
 
 **Return**  
+문자열 **s**에서 **maxlen**까지의 길이
 
+
+**Ussage**  
+문자열의 길이를 **maxlen**까지만 알고 싶을 때
 
 ---
 
