@@ -211,7 +211,6 @@ size_t	strlen(const char *s);
 
 ---
 
-여기까지 커밋
 ### ft_strnlen
 > string n length
 
@@ -296,6 +295,7 @@ size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 
 **Return**
 
+여기까지 커밋
 ---
 
 ### ft_strnstr
