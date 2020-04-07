@@ -24,9 +24,7 @@ later
 later
 
 ## Part 1 - Libc functions
-> Part 1 - libc finctions
-
-함수들의 프로토타입은 OS X의 BSD libc를 기준으로 작성되었습니다.
+> 함수들의 프로토타입은 OS X의 BSD libc를 기준으로 작성되었습니다.
 
 ---
 
@@ -427,11 +425,232 @@ char    *strrchr(const char *s, int c);
 ---
 
 ## Part 2 - Additional functions
-Part 2 - Additional functions는 libc에는 없지만, 유용한 함수들입니다.
+> libc에는 없지만, 유용한 함수들을 모아둔 파트입니다.
+
+---
+
+### 
+> 
+
+**Prototype Declaration**  
+```c
+
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
 
 ## BONUS
+> list에 관련된 함수들을 모아둔 파트입니다.
+
+본 파트에서 사용할 list는 다음과 같은 structure를 가지고 있습니다.
+```c
+typedef structs_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+```
+
+### ft_lstnew
+> list new
+
+**Prototype Declaration**  
+```c
+t_list *ft_lstnew(void *content);
+```
+**Description**  
+**content**의 내용으로 새로운 리스트를 만들어 줍니다.
+
+
+**Return**  
+새로 만들어진 리스트의 포인터를 반환합니다.
+
+
+**Ussage**  
+새로운 리스트를 만들고 싶을 때
+
+---
+
+### ft_lstadd_front
+> 
+
+**Prototype Declaration**  
+```c
+void ft_lstadd_front(t_list **lst, t_list *new);
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstsize
+> 
+
+**Prototype Declaration**  
+```c
+int ft_lstsize(t_list *lst);
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstlast
+> 
+
+**Prototype Declaration**  
+```c
+t_list *ft_lstlast(t_list *lst);
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstadd_back
+> 
+
+**Prototype Declaration**  
+```c
+void ft_lstadd_back(t_list **lst, t_list *new);
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstdelone
+> 
+
+**Prototype Declaration**  
+```c
+void ft_lstdelone(t_list *lst, void (*del)(void*));
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstclear
+> 
+
+**Prototype Declaration**  
+```c
+void ft_lstclear(t_list **lst, void (*del)(void*));
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstiter
+> 
+
+**Prototype Declaration**  
+```c
+void ft_lstiter(t_list *lst, void (*f)(void *));
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+### ft_lstmap
+> 
+
+**Prototype Declaration**  
+```c
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+```
+**Description**  
+
+
+
+**Return**  
+
+
+
+**Ussage**  
+
+
+---
+
+
+
+
+
+
+
+
 
 ## EXTRA
+> 개인적으로 사용할 함수들을 모아둔 파트입니다.
 
 ### ft_strnlen
 > string n length
