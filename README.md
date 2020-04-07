@@ -115,7 +115,7 @@ void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 **Prototype Declaration**  
 ```c
-void *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void    *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
 **Description**  
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
@@ -183,7 +183,7 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 
 **Prototype Declaration**  
 ```c
-size_t	strlen(const char *s);
+size_t    strlen(const char *s);
 ```
 **Description**  
 문자열 **s**의 길이를 구합니다.
@@ -454,11 +454,11 @@ char    *strrchr(const char *s, int c);
 
 본 파트에서 사용할 list는 다음과 같은 structure를 가지고 있습니다.
 ```c
-typedef structs_list
+typedef struct      s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
 ```
 
 ### ft_lstnew
@@ -466,7 +466,7 @@ struct s_list *next;
 
 **Prototype Declaration**  
 ```c
-t_list *ft_lstnew(void *content);
+t_list    *ft_lstnew(void *content);
 ```
 **Description**  
 **content**의 내용으로 새로운 리스트를 만들어 줍니다.
@@ -486,7 +486,7 @@ t_list *ft_lstnew(void *content);
 
 **Prototype Declaration**  
 ```c
-void ft_lstadd_front(t_list **lst, t_list *new);
+void    ft_lstadd_front(t_list **lst, t_list *new);
 ```
 **Description**  
 
@@ -506,7 +506,7 @@ void ft_lstadd_front(t_list **lst, t_list *new);
 
 **Prototype Declaration**  
 ```c
-int ft_lstsize(t_list *lst);
+int    ft_lstsize(t_list *lst);
 ```
 **Description**  
 
@@ -526,7 +526,7 @@ int ft_lstsize(t_list *lst);
 
 **Prototype Declaration**  
 ```c
-t_list *ft_lstlast(t_list *lst);
+t_list    *ft_lstlast(t_list *lst);
 ```
 **Description**  
 
@@ -546,7 +546,7 @@ t_list *ft_lstlast(t_list *lst);
 
 **Prototype Declaration**  
 ```c
-void ft_lstadd_back(t_list **lst, t_list *new);
+void    ft_lstadd_back(t_list **lst, t_list *new);
 ```
 **Description**  
 
@@ -566,7 +566,7 @@ void ft_lstadd_back(t_list **lst, t_list *new);
 
 **Prototype Declaration**  
 ```c
-void ft_lstdelone(t_list *lst, void (*del)(void*));
+void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
 **Description**  
 
@@ -586,7 +586,7 @@ void ft_lstdelone(t_list *lst, void (*del)(void*));
 
 **Prototype Declaration**  
 ```c
-void ft_lstclear(t_list **lst, void (*del)(void*));
+void    ft_lstclear(t_list **lst, void (*del)(void*));
 ```
 **Description**  
 
@@ -606,7 +606,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*));
 
 **Prototype Declaration**  
 ```c
-void ft_lstiter(t_list *lst, void (*f)(void *));
+void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```
 **Description**  
 
@@ -626,7 +626,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *));
 
 **Prototype Declaration**  
 ```c
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list    *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 **Description**  
 
@@ -671,4 +671,3 @@ size_t    strnlen(const char *s, size_t maxlen);
 문자열의 길이를 **maxlen**까지만 알고 싶을 때
 
 ---
-
