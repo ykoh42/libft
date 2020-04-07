@@ -18,43 +18,10 @@ Coding convention은 42의 convention을 따라 작성되었으며, [*Libftest*]
     >make
 
 ## Contents
-- [Welcome to the Libft!](#welcome-to-the-libft-)
-  * [Contents](#contents)
-  * [Issues and pull requests](#issues-and-pull-requests)
-  * [Getting started](#getting-started)
-  * [MAKEFILE](#makefile)
-  * [Part 1 - Libc functions](#part-1---libc-functions)
-    + [ft_memset](#ft-memset)
-    + [ft_bzero](#ft-bzero)
-    + [ft_memchr](#ft-memchr)
-    + [ft_memcpy](#ft-memcpy)
-    + [ft_memccpy](#ft-memccpy)
-    + [ft_memmove](#ft-memmove)
-    + [ft_memcmp](#ft-memcmp)
-    + [ft_strlen](#ft-strlen)
-    + [ft_strnlen](#ft-strnlen)
-    + [ft_strlcpy](#ft-strlcpy)
-    + [ft_strlcat](#ft-strlcat)
-    + [ft_strchr](#ft-strchr)
-    + [ft_strrchr](#ft-strrchr)
-    + [ft_strnstr](#ft-strnstr)
-    + [ft_strncmp](#ft-strncmp)
-    + [ft_atoi](#ft-atoi)
-    + [ft_isalpha](#ft-isalpha)
-    + [ft_isdigit](#ft-isdigit)
-    + [ft_isalnum](#ft-isalnum)
-    + [ft_isascii](#ft-isascii)
-    + [ft_isprint](#ft-isprint)
-    + [ft_toupper](#ft-toupper)
-    + [ft_tolower](#ft-tolower)
-  * [Part 2 - Additional functions](#part-2---additional-functions)
-  * [BONUS](#bonus)
-  * [EXTRA](#extra)
-    + [ft_](#ft-)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+later
 
 ## MAKEFILE
+later
 
 ## Part 1 - Libc functions
 > Part 1 - libc finctions
@@ -223,28 +190,9 @@ size_t	strlen(const char *s);
 **Description**  
 문자열 **s**의 길이를 구합니다.
 
+
 **Return**  
 문자열 **s**의 길이
-
-
-<<<<<<< HEAD
-### ft_strnlen
-> string n length
-
-**Prototype Declaration**
-```c
-size_t    strnlen(const char *s, size_t maxlen);
-```
-
-**Description**
-문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
-
-**Return**
-문자열 **s**에서 **maxlen**까지의 길이
-=======
-**Ussage**  
-문자열의 길이를 알고 싶을 때
->>>>>>> d3044d47f3a63a4fe01292819eb90b16e59382e2
 
 ---
 
@@ -310,7 +258,7 @@ char    *strchr(const char *s, int c);
 ---
 
 ### ft_strrchr
-> string reverse(rear(?)) chr
+> string reverse(rear(?)) chracter
 
 **Prototype Declaration**  
 ```c
