@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 18:58:16 by ykoh              #+#    #+#             */
-/*   Updated: 2020/03/18 02:10:04 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/03 14:57:17 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen (const char *s)
 {
-	size_t	cnt;
+	size_t	i;
 
-	cnt = 0;
-	while (s[cnt])
-		cnt++;
-	return (cnt);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

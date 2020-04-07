@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 16:09:01 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/04 17:20:45 by ykoh             ###   ########.fr       */
+/*   Created: 2020/03/03 19:57:19 by ykoh              #+#    #+#             */
+/*   Updated: 2020/03/06 15:02:37 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+int	ft_atoi (const char *str)
 {
-/*
-	void	*p;
+	char	neg;
+	int	num;
 
-	if ((p = ft_memchr(src, c, n)))
-		return (ft_memcpy(dst, src, p - src + 1) + (p - src + 1));
-	ft_memcpy(dst, src, n);
-	return (NULL);
-
-*/
-	const void	*p = ft_memchr(src, c, n);
-
-	if (p != NULL)
+	while (ft_isspace(*str))
+		str++;
+	neg = (*str == '-');
+	if (*str == '+' || *str == '-')
+		str++;
+	num = 0;
+	while (ft_isdigit(*str))
 	{
-		n = p - src + 1;
-		return (ft_memcpy(dst, src, n) + n);
+		num = num * 10 + (*str - '0');
+		str++;
 	}
-	ft_memcpy(dst, src, n);
-	return (NULL);
+	return (neg ? -num : num);
 }

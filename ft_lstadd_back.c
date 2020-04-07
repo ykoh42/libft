@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 16:09:01 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/04 17:20:45 by ykoh             ###   ########.fr       */
+/*   Created: 2020/04/04 17:35:53 by ykoh              #+#    #+#             */
+/*   Updated: 2020/04/06 17:12:41 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-/*
-	void	*p;
-
-	if ((p = ft_memchr(src, c, n)))
-		return (ft_memcpy(dst, src, p - src + 1) + (p - src + 1));
-	ft_memcpy(dst, src, n);
-	return (NULL);
-
-*/
-	const void	*p = ft_memchr(src, c, n);
-
-	if (p != NULL)
+	if (new)
 	{
-		n = p - src + 1;
-		return (ft_memcpy(dst, src, n) + n);
+		if (*lst)
+			(ft_lstlast(*lst))->next = new;
+
+		else
+			*lst = new;
 	}
-	ft_memcpy(dst, src, n);
-	return (NULL);
 }
