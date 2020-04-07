@@ -3,7 +3,7 @@
 
 작성한 함수가 어떤 역할을 했었는지, 시간이 지나면 자꾸 까먹어서 다시 확인할 용도로 작성되었습니다.
 
-Coding convention은 42의 convention을 따라 작성되었으며, [*Libftest*](https://github.com/jtoty/Libftest)를 통해 테스트하였습니다.
+Coding convention은 42의 convention을 따라 작성되었으며, [*libft-unit-test*](https://github.com/alelievr/libft-unit-test)를 통해 테스트하였습니다.
 
 라이브러리가 무엇이고 왜 사용하는지에 대한 이해가 필요하시면 [*라이브러리 만들기*](https://www.joinc.co.kr/w/Site/C/Documents/Make_Library)를 참고해주세요.
 
@@ -469,107 +469,108 @@ typedef struct      s_list
 t_list    *ft_lstnew(void *content);
 ```
 **Description**  
-**content**의 내용으로 새로운 리스트를 만들어 줍니다.
-
+**content**의 내용으로 새로운 요소(element)를 만들어 줍니다.  
+**content**가 NULL일 때도 **content**가 NULL인 요소를 만들어 줍니다.
 
 **Return**  
-새로 만들어진 리스트의 포인터를 반환합니다.
+새로 만들어진 요소의 포인터를 반환합니다.
 
 
 **Ussage**  
-새로운 리스트를 만들고 싶을 때
-
----
-
-### ft_lstadd_front
-> 
-
-**Prototype Declaration**  
-```c
-void    ft_lstadd_front(t_list **lst, t_list *new);
-```
-**Description**  
-
-
-
-**Return**  
-
-
-
-**Ussage**  
-
-
----
-
-### ft_lstsize
-> 
-
-**Prototype Declaration**  
-```c
-int    ft_lstsize(t_list *lst);
-```
-**Description**  
-
-
-
-**Return**  
-
-
-
-**Ussage**  
-
+새로운 요소(element)를 만들고 싶을 때
 
 ---
 
 ### ft_lstlast
-> 
+> list last
 
 **Prototype Declaration**  
 ```c
 t_list    *ft_lstlast(t_list *lst);
 ```
 **Description**  
-
+**lst**의 마지막 element를 찾아줍니다.
 
 
 **Return**  
-
+**Lst**의 마지막 element 포인터
 
 
 **Ussage**  
+리스트의 마지막 요소에 접근하고 싶을 때  
+마지막 요소에 접근해서 무언가 하고 싶을 때  
 
+---
+
+### ft_lstsize
+> list size
+
+**Prototype Declaration**  
+```c
+int    ft_lstsize(t_list *lst);
+```
+**Description**  
+**lst**의 길이를 구해서 반환해줍니다.
+
+
+**Return**  
+**lst**의 길이
+
+
+**Ussage**  
+리스트의 길이를 구하고 싶을 때
+
+---
+
+### ft_lstadd_front
+> list add front
+
+**Prototype Declaration**  
+```c
+void    ft_lstadd_front(t_list **lst, t_list *new);
+```
+**Description**  
+**lst** 리스트 앞에 **new** 리스트를 붙여 줍니다.
+
+
+**Return**  
+없음
+
+
+**Ussage**  
+리스트 **앞에** 새로운 리스트를 이어 붙이고 싶을 때
 
 ---
 
 ### ft_lstadd_back
-> 
+> list add back
 
 **Prototype Declaration**  
 ```c
 void    ft_lstadd_back(t_list **lst, t_list *new);
 ```
 **Description**  
-
+**lst** 리스트 뒤에 **new** 리스트를 붙여 줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+리스트 **뒤에** 새로운 리스트를 이어 붙이고 싶을 때
 
 ---
 
 ### ft_lstdelone
-> 
+> list delete one
 
 **Prototype Declaration**  
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
 **Description**  
-
+lst
 
 
 **Return**  
