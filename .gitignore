@@ -1,3 +1,5 @@
 *.a
 *.o
 report.wiki/
+a.out
+a.out*/

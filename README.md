@@ -177,7 +177,6 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n);
 
 ---
 
-여기까지
 ### ft_strlen
 > string length
 

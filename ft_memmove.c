@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 17:19:14 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/02 19:34:54 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/08 22:13:25 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memmove (void *dst, const void *src, size_t len)
 {
+	if (!dst && !src)
+		return (NULL);
 	if ((size_t) (dst - src) >= len)
 		return (ft_memcpy(dst, src, len));
 	while (len--)
