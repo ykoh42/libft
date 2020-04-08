@@ -8,7 +8,7 @@ Coding convention은 42의 convention을 따라 작성되었으며, [*libft-unit
 라이브러리가 무엇이고 왜 사용하는지에 대한 이해가 필요하시면 [*라이브러리 만들기*](https://www.joinc.co.kr/w/Site/C/Documents/Make_Library)를 참고해주세요.
 
 ## Issues and pull requests
-아직 학습하는 단계이기 때문에, 잘못된 이해 혹은 잘못된 코드가 작성되었을 수도 있습니다.
+아직 학습하는 단계이기 때문에, 잘못된 이해 혹은 잘못된 코드가 작성되었을 수도 있습니다.  
 이런 문제들을 발견하셨다면, 그냥 지나치지 마시고, 코린이를 위해, 이슈 혹은 풀 리퀘스트를 날려주시면 정말 감사하겠습니다. :kissing_heart::kissing_heart::kissing_heart::kissing_heart:
 
 ## Getting started
@@ -33,7 +33,7 @@ later
 
 **Prototype Declaration**  
 ```c
-void    *memset(void *b, int c, size_t len);
+void    *ft_memset(void *b, int c, size_t len);
 ```
 **Description**  
 메모리 영역 **b**의 **len** byte까지를 **c**로 초기화합니다.
@@ -53,7 +53,7 @@ void    *memset(void *b, int c, size_t len);
 
 **Prototype Declaration**  
 ```c
-void    bzero(void *s, size_t n);
+void    ft_bzero(void *s, size_t n);
 ```
 **Description**  
 메모리 영역 **s**의 **n** bytes까지를 **0**으로 초기화합니다.
@@ -74,7 +74,7 @@ void    bzero(void *s, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *memchr(const void *s, int c, size_t n);
+void    *ft_memchr(const void *s, int c, size_t n);
 ```
 **Description**  
 **n** bytes 까지의 메모리 영역 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
@@ -93,7 +93,7 @@ void    *memchr(const void *s, int c, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
+void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```
 **Description**  
 메모리 영역 **src**의 **n** bytes만큼을 **dst**로 복사합니다.
@@ -115,7 +115,7 @@ void    *memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
 **Description**  
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
@@ -137,7 +137,7 @@ void    *memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *memmove(void *dst, const void *src, size_t len);
+void    *ft_memmove(void *dst, const void *src, size_t len);
 ```
 **Description**  
 메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
@@ -159,7 +159,7 @@ memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사
 
 **Prototype Declaration**  
 ```c
-int    memcmp(const void *s1, const void *s2, size_t n);
+int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
 **Description**  
 메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
@@ -183,7 +183,7 @@ int    memcmp(const void *s1, const void *s2, size_t n);
 
 **Prototype Declaration**  
 ```c
-size_t    strlen(const char *s);
+size_t    ft_strlen(const char *s);
 ```
 **Description**  
 문자열 **s**의 길이를 구합니다.
@@ -199,7 +199,7 @@ size_t    strlen(const char *s);
 
 **Prototype Declaration**  
 ```c
-size_t    strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t    ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
 **Description**  
 문자열 **src**에서 **dst**로 **dstsize** bytes 만큼 복사합니다.
@@ -221,7 +221,7 @@ memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 
 **Prototype Declaration**  
 ```c
-size_t    strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t    ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
 **Description**  
 문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
@@ -243,7 +243,7 @@ NUL이 보장되는 strcat이 필요할 때
 
 **Prototype Declaration**  
 ```c
-char    *strchr(const char *s, int c);
+char    *ft_strchr(const char *s, int c);
 ```
 **Description**  
 문자열 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
@@ -260,7 +260,7 @@ char    *strchr(const char *s, int c);
 
 **Prototype Declaration**  
 ```c
-char    *strrchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 ```
 **Description**  
 문자열 **s**의 **뒤에서부터** 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
@@ -658,7 +658,7 @@ lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 
 
 **Prototype Declaration**  
 ```c
-size_t    strnlen(const char *s, size_t maxlen);
+size_t    ft_strnlen(const char *s, size_t maxlen);
 ```
 **Description**  
 문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
