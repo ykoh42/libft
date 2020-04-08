@@ -489,11 +489,11 @@ t_list    *ft_lstnew(void *content);
 t_list    *ft_lstlast(t_list *lst);
 ```
 **Description**  
-**lst**의 마지막 element를 찾아줍니다.
+**lst**의 마지막 요소를 찾아줍니다.
 
 
 **Return**  
-**Lst**의 마지막 element 포인터
+**Lst** 마지막 요소의 포인터
 
 
 **Ussage**  
@@ -530,7 +530,7 @@ int    ft_lstsize(t_list *lst);
 void    ft_lstadd_front(t_list **lst, t_list *new);
 ```
 **Description**  
-**lst** 리스트 앞에 **new** 리스트를 붙여 줍니다.
+**lst** 리스트 앞에 **new** 요소를 붙여 줍니다.
 
 
 **Return**  
@@ -538,7 +538,7 @@ void    ft_lstadd_front(t_list **lst, t_list *new);
 
 
 **Ussage**  
-리스트 **앞에** 새로운 리스트를 이어 붙이고 싶을 때
+리스트 **앞에** 새로운 요소를 이어 붙이고 싶을 때
 
 ---
 
@@ -550,7 +550,7 @@ void    ft_lstadd_front(t_list **lst, t_list *new);
 void    ft_lstadd_back(t_list **lst, t_list *new);
 ```
 **Description**  
-**lst** 리스트 뒤에 **new** 리스트를 붙여 줍니다.
+**lst** 리스트 뒤에 **new** 요소를 붙여 줍니다.
 
 
 **Return**  
@@ -558,7 +558,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 
 
 **Ussage**  
-리스트 **뒤에** 새로운 리스트를 이어 붙이고 싶을 때
+리스트 **뒤에** 새로운 요소를 이어 붙이고 싶을 때
 
 ---
 
@@ -570,85 +570,85 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
 **Description**  
-lst
+**lst** 요소를 삭제합니다.  
+**lst->content**에 **del**을 적용해주고 **lst**를 free합니다.  
+**lst->next**는 free하지 않습니다.  
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
+요소의 content을 지우고 싶을 때
 
 
 ---
 
 ### ft_lstclear
-> 
+> lst clear
 
 **Prototype Declaration**  
 ```c
 void    ft_lstclear(t_list **lst, void (*del)(void*));
 ```
 **Description**  
-
-
+**lst** 의 content를 지워줍니다.(리스트를 초기화 해줍니다.)  
+**lst->next**는 free하지 않습니다. 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+리스트 전체를 지우고 싶을 때
 
 ---
 
 ### ft_lstiter
-> 
+> list iteration
 
 **Prototype Declaration**  
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```
 **Description**  
-
+리스트를 순회하면서 **lst**에 **f**를 적용해줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+리스트 전체에 함수를 적용하고 싶을 때
 
 ---
 
 ### ft_lstmap
-> 
+> list mapping
 
 **Prototype Declaration**  
 ```c
 t_list    *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 **Description**  
-
+리스트를 순회하면서 **lst**에 **f**를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. 
 
 
 **Return**  
-
+**f**가 적용된 리스트의 포인터
 
 
 **Ussage**  
+리스트에서 **f**가 적용된 리스트들만 추리고 싶을 때  
+
+
+lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 있는 **f**이기 때문에 함수의 적용여부를 확인 할 수 있음(?)  
+그래서 함수가 적용된 리스트만 반환할 수 있다(?) 그럼 아얘 용도가 사라진 원 리스트의 next는 어떻게 되는 것이지,,?  
 
 
 ---
-
-
-
-
-
-
-
-
 
 ## EXTRA
 > 개인적으로 사용할 함수들을 모아둔 파트입니다.
@@ -672,3 +672,4 @@ size_t    strnlen(const char *s, size_t maxlen);
 문자열의 길이를 **maxlen**까지만 알고 싶을 때
 
 ---
+

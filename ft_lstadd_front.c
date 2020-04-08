@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/04 16:04:26 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/07 19:30:57 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/08 15:20:57 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new)
 	{
-		ft_lstlast(new)->next = *lst;
+		new->next = *lst;
 		*lst = new;
 	}
 }
