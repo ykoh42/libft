@@ -6,13 +6,13 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 18:58:16 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/03 14:57:17 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/09 22:18:18 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen (const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
