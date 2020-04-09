@@ -423,6 +423,41 @@ char    *ft_strrchr(const char *s, int c);
 
 ---
 
+### ft_calloc
+> contiguous allocation
+
+**Prototype Declaration**  
+```c
+void    *ft_calloc(size_t count, size_t size);
+```
+
+**Description**  
+0으로 초기화된 연속적인 메모리공간(**count** x **size**)을 할당해줍니다.
+
+
+**Return**  
+할당 성공시 할당된 공간의 포인터  
+할당 실패시 NULL 포인터
+
+---
+
+### ft_strdup
+> string duplicate
+
+**Prototype Declaration**  
+```c
+char    *strdup(const char *s1);
+```
+
+**Description**  
+문자열 **s1**을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+---
+
 ## Part 2 - Additional functions
 > libc에는 없지만, 유용한 함수들을 모아둔 파트입니다.
 
@@ -650,7 +685,41 @@ lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 
 ---
 
 ## EXTRA
-> 개인적으로 사용할 함수들을 모아둔 파트입니다.
+> 개인적으로 필요한 함수들을 모아둔 파트입니다.
+
+### ft_islower
+> is lower
+
+**Prototype Declaration**  
+```c
+int    ft_islower(int c);
+```
+
+**Description**  
+**c**가 소문자인지 아닌지 확인합니다.
+
+
+**Return**  
+소문자이면 **1**, 아니면 **0**을 반환
+
+---
+
+### ft_isupper
+> is upper
+
+**Prototype Declaration**  
+```c
+int    ft_isupper(int c);
+```
+
+**Description**  
+**c**가 대문자인지 아닌지 확인합니다.
+
+
+**Return**  
+대문자이면 **1**, 아니면 **0**을 반환
+
+---
 
 ### ft_strnlen
 > string n length
