@@ -304,32 +304,38 @@ char    *ft_strrchr(const char *s, int c);
 ---
 
 ### ft_atoi
-> 
+> ascii to int
 
 **Prototype Declaration**  
 ```c
-
+int    atoi(const char *str);
 ```
 
 **Description**  
+ ASCII 문자열 **str**을  정수로 바꿔줍니다.
+
 
 **Return**  
-
+문자열에 **str**에 해당하는 정수
 
 ---
 
 ### ft_isalpha
-> 
+> is alphabet
 
 **Prototype Declaration**  
 ```c
-
+int    isalpha(int c);
 ```
 
 **Description**  
+**c**가 알파벳 문자인지 아닌지 확인해줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
-
+알파벳이면 1  
+알파벳이 아니면 0  
 
 ---
 
