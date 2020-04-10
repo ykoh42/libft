@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:50:39 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/06 21:31:52 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/10 15:20:37 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <stdbool.h>
 # include <unistd.h>
 
 typedef struct		s_list
