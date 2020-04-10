@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 17:47:33 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/03 18:34:04 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/10 23:31:21 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	res;
 
-	while (n-- || *s1)
+	while (n--)
 	{
-		if ((res = *(s1++) - *(s2++)))
+		if ((res = (unsigned char)*s1++ - (unsigned char)*s2++) || *s1 == 0)
 			return (res);
 	}
 	return (0);

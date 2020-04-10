@@ -174,9 +174,9 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n);
 
 
 **Return**  
-**s1**이 크면 **양수**
-**s2**가 크면 **음수**
-같으면 **0**
+**s1**이 크면 양수  
+**s2**가 크면 음수  
+같으면 0  
 
 
 **Ussage**  
@@ -314,17 +314,21 @@ char    *ft_strrchr(const char *s, int c);
 ---
 
 ### ft_strncmp
-> 
+> string n compare
 
 **Prototype Declaration**  
 ```c
-
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 ```
 
 **Description**  
+문자열 **s1**과 문자열 **s2**를 **n**만큼 비교해줍니다.
+
 
 **Return**  
-
+**s1**이 크면 양수  
+**s2**가 크면 음수  
+같으면 0   
 
 ---
 
@@ -377,7 +381,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 
 **Prototype Declaration**  
 ```c
-int    ft_isdigit(int c)
+int    ft_isdigit(int c);
 ```
 
 **Description**  
@@ -445,7 +449,7 @@ ASCII 문자가 아니면 0
 
 **Prototype Declaration**  
 ```c
-int    ft_isprint(int c)
+int    ft_isprint(int c);
 ```
 
 **Description**  
@@ -490,7 +494,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 
 **Prototype Declaration**  
 ```c
-int    ft_tolower(int c)
+int    ft_tolower(int c);
 ```
 
 **Description**  
