@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/06 18:21:49 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/06 18:55:50 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/08 23:35:42 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-		while (lst && f)
-		{
-			f(lst->content);
-			lst = lst->next;
-		}
+	while (lst && f)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

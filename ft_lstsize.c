@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/04 16:16:40 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/04 18:35:34 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/08 23:35:52 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-		while (lst)
-		{
-			lst = lst->next;
-			i++;
-		}
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
 	return (i);
 }
