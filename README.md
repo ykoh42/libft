@@ -79,6 +79,7 @@ void    *ft_memchr(const void *s, int c, size_t n);
 **Description**  
 **n** bytes 까지의 메모리 영역 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 
+
 **Return**  
 처음으로 값 **c**가 나타나는 포인터
 
@@ -248,9 +249,14 @@ char    *ft_strchr(const char *s, int c);
 문자열 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 **s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
 
+
 **Return**  
 문자 **c**가 처음 발견된 곳의 포인터
 문자열 **s**에 문자 **c**가 없으면 NULL 포인터
+
+
+**Ussage**  
+문자열 앞에서부터 특정 문자를 찾을 떄
 
 ---
 
@@ -270,7 +276,12 @@ char    *ft_strrchr(const char *s, int c);
 뒤에서부터 문자 **c**가 처음 발견된 곳의 포인터
 문자열 **s**에 문자 **c**가 없으면 NULL 포인터
 
+
+**Ussage**  
+문자열 뒤에서부터 특정 문자를 찾을 떄
+
 여기까지 커밋
+
 ---
 
 ### ft_strnstr
@@ -280,8 +291,9 @@ char    *ft_strrchr(const char *s, int c);
 ```c
 
 ```
-
 **Description**  
+
+
 
 **Return**  
 
@@ -295,7 +307,6 @@ char    *ft_strrchr(const char *s, int c);
 ```c
 
 ```
-
 **Description**  
 
 **Return**  
@@ -308,124 +319,169 @@ char    *ft_strrchr(const char *s, int c);
 
 **Prototype Declaration**  
 ```c
-int    atoi(const char *str);
+int    ft_atoi(const char *str);
 ```
-
 **Description**  
- ASCII 문자열 **str**을  정수로 바꿔줍니다.
+문자열 **str**을 정수로 바꿔줍니다.
 
 
 **Return**  
 문자열에 **str**에 해당하는 정수
 
+
+**Ussage**  
+문자로된 숫자를 진짜 숫자로 바꿔줄 때
+
 ---
 
 ### ft_isalpha
-> is alphabet
+> is alphabetic character
 
 **Prototype Declaration**  
 ```c
-int    isalpha(int c);
+int    ft_isalpha(int c);
 ```
-
 **Description**  
 **c**가 알파벳 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
 **Return**  
-알파벳이면 1  
+알파벳이면     1  
 알파벳이 아니면 0  
+
+
+**Ussage**  
+알파벳 문자인지 아닌지 확인해야할 떄
 
 ---
 
 ### ft_isdigit
-> 
+> is digit character
 
 **Prototype Declaration**  
 ```c
-
+int    ft_isdigit(int c)
 ```
-
 **Description**  
+**c**가 숫자 문자인지 아닌지 확인해줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+숫자면      1  
+숫자가 아니면 0  
 
+
+**Ussage**  
+숫자 문자인지 아닌지 확인해야 할 때
 
 ---
 
 ### ft_isalnum
-> 
+> is alphanumeric character
 
 **Prototype Declaration**  
 ```c
-
+int    ft_isalnum(int c);
 ```
-
 **Description**  
+**c**가 알파벳 또는 숫자 문자인지 아닌지 확인해줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+알파벳이나 숫자면      1
+알파벳이나 숫자가 아니면 0
 
+**Ussage**  
+알파벳이랑 숫자만 골라내고 싶을 때
 
 ---
 
 ### ft_isascii
-> 
+> is ASCII charecter
 
 **Prototype Declaration**  
 ```c
-
+int    ft_isascii(int c);
 ```
-
 **Description**  
+**c**가 ASCII 문자인지 아닌지 확인해줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+ASCII 문자면      1
+ASCII 문자가 아니면 0
 
+
+**Ussage**  
+아스키 문자인지 아닌지 확인하고 싶을 때
 
 ---
 
 ### ft_isprint
-> 
+> is printable charecter
 
 **Prototype Declaration**  
 ```c
-
+int    ft_isprint(int c)
 ```
-
 **Description**  
+**c**가 출력 가능한 문자인지 아닌지 확인해줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+출력 가능한 문자면      1
+출력 가능한 문자가 아니면 0
 
+
+**Ussage**  
+출력할 수 있는 문자인지 아닌지 확인하고 싶을 때
 
 ---
 
 ### ft_toupper
-> 
+> to upper case charecter
 
 **Prototype Declaration**  
 ```c
-
+int    ft_toupper(int c)
 ```
-
 **Description**  
+**c**가 소문자면 대문자로 바꿔줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+대문자로 변환된 문자(int)
 
+
+**Ussage**  
+소문자를 대문자로 바꾸고 싶을 때
 
 ---
 
 ### ft_tolower
-> 
+> to lower case charecter
 
 **Prototype Declaration**  
 ```c
-
+int    ft_tolower(int c)
 ```
-
 **Description**  
+**c**가 대문자면 소문자로 바꿔줍니다.  
+EOF(-1)를 처리해주기 위해 int로 받습니다.  
+
 
 **Return**  
+소문자로 변환된 문자(int)
 
+
+**Ussage**  
+대문자를 소문자로 바꾸고 싶을 때
 
 ---
 
@@ -436,7 +492,6 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 void    *ft_calloc(size_t count, size_t size);
 ```
-
 **Description**  
 0으로 초기화된 연속적인 메모리공간(**count** x **size**)을 할당해줍니다.
 
@@ -445,6 +500,10 @@ void    *ft_calloc(size_t count, size_t size);
 할당 성공시 할당된 공간의 포인터  
 할당 실패시 NULL 포인터
 
+
+**Ussage**  
+메모리 할당과 동시에 초기화가 필요할 때
+
 ---
 
 ### ft_strdup
@@ -452,7 +511,7 @@ void    *ft_calloc(size_t count, size_t size);
 
 **Prototype Declaration**  
 ```c
-char    *strdup(const char *s1);
+char    *ft_strdup(const char *s1);
 ```
 
 **Description**  
@@ -461,6 +520,10 @@ char    *strdup(const char *s1);
 
 **Return**  
 복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
 
 ---
 
