@@ -35,6 +35,7 @@ later
 ```c
 void    *ft_memset(void *b, int c, size_t len);
 ```
+
 **Description**  
 메모리 영역 **b**의 **len** byte까지를 **c**로 초기화합니다.
 
@@ -55,6 +56,7 @@ void    *ft_memset(void *b, int c, size_t len);
 ```c
 void    ft_bzero(void *s, size_t n);
 ```
+
 **Description**  
 메모리 영역 **s**의 **n** bytes까지를 **0**으로 초기화합니다.
 초기화 용도로 사용되며, memset과 동일한 역할을 합니다.
@@ -76,6 +78,7 @@ void    ft_bzero(void *s, size_t n);
 ```c
 void    *ft_memchr(const void *s, int c, size_t n);
 ```
+
 **Description**  
 **n** bytes 까지의 메모리 영역 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 
@@ -96,6 +99,7 @@ void    *ft_memchr(const void *s, int c, size_t n);
 ```c
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```
+
 **Description**  
 메모리 영역 **src**의 **n** bytes만큼을 **dst**로 복사합니다.
 절대 src와 dst의 메모리 영역이 겹쳐서는 안됩니다.
@@ -118,6 +122,7 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```c
 void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
+
 **Description**  
 메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
 절대 **src**와 **dst**의 메모리 영역이 **겹쳐서는 안됩니다**.
@@ -140,6 +145,7 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 ```c
 void    *ft_memmove(void *dst, const void *src, size_t len);
 ```
+
 **Description**  
 메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
 memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사용합니다.
@@ -162,6 +168,7 @@ memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사
 ```c
 int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
+
 **Description**  
 메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
 
@@ -185,6 +192,7 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ```c
 size_t    ft_strlen(const char *s);
 ```
+
 **Description**  
 문자열 **s**의 길이를 구합니다.
 
@@ -201,6 +209,7 @@ size_t    ft_strlen(const char *s);
 ```c
 size_t    ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
+
 **Description**  
 문자열 **src**에서 **dst**로 **dstsize** bytes 만큼 복사합니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcpy 입니다.
@@ -223,6 +232,7 @@ memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 ```c
 size_t    ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
+
 **Description**  
 문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다. (dstsize의 제일 마지막에 \0을 붙임)
@@ -245,6 +255,7 @@ NUL이 보장되는 strcat이 필요할 때
 ```c
 char    *ft_strchr(const char *s, int c);
 ```
+
 **Description**  
 문자열 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 **s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
@@ -267,6 +278,7 @@ char    *ft_strchr(const char *s, int c);
 ```c
 char    *ft_strrchr(const char *s, int c);
 ```
+
 **Description**  
 문자열 **s**의 **뒤에서부터** 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
 **s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
@@ -291,6 +303,7 @@ char    *ft_strrchr(const char *s, int c);
 ```c
 
 ```
+
 **Description**  
 
 
@@ -307,6 +320,7 @@ char    *ft_strrchr(const char *s, int c);
 ```c
 
 ```
+
 **Description**  
 
 **Return**  
@@ -321,6 +335,7 @@ char    *ft_strrchr(const char *s, int c);
 ```c
 int    ft_atoi(const char *str);
 ```
+
 **Description**  
 문자열 **str**을 정수로 바꿔줍니다.
 
@@ -341,6 +356,7 @@ int    ft_atoi(const char *str);
 ```c
 int    ft_isalpha(int c);
 ```
+
 **Description**  
 **c**가 알파벳 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -363,6 +379,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 int    ft_isdigit(int c)
 ```
+
 **Description**  
 **c**가 숫자 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -385,6 +402,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 int    ft_isalnum(int c);
 ```
+
 **Description**  
 **c**가 알파벳 또는 숫자 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -406,6 +424,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 int    ft_isascii(int c);
 ```
+
 **Description**  
 **c**가 ASCII 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -428,6 +447,7 @@ ASCII 문자가 아니면 0
 ```c
 int    ft_isprint(int c)
 ```
+
 **Description**  
 **c**가 출력 가능한 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -450,6 +470,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 int    ft_toupper(int c)
 ```
+
 **Description**  
 **c**가 소문자면 대문자로 바꿔줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -471,6 +492,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 int    ft_tolower(int c)
 ```
+
 **Description**  
 **c**가 대문자면 소문자로 바꿔줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
@@ -492,6 +514,7 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ```c
 void    *ft_calloc(size_t count, size_t size);
 ```
+
 **Description**  
 0으로 초기화된 연속적인 메모리공간(**count** x **size**)을 할당해줍니다.
 
@@ -539,6 +562,7 @@ char    *ft_strdup(const char *s1);
 ```c
 
 ```
+
 **Description**  
 
 
@@ -571,6 +595,7 @@ typedef struct      s_list
 ```c
 t_list    *ft_lstnew(void *content);
 ```
+
 **Description**  
 **content**의 내용으로 새로운 요소(element)를 만들어 줍니다.  
 **content**가 NULL일 때도 **content**가 NULL인 요소를 만들어 줍니다.
@@ -591,6 +616,7 @@ t_list    *ft_lstnew(void *content);
 ```c
 t_list    *ft_lstlast(t_list *lst);
 ```
+
 **Description**  
 **lst**의 마지막 요소를 찾아줍니다.
 
@@ -612,6 +638,7 @@ t_list    *ft_lstlast(t_list *lst);
 ```c
 int    ft_lstsize(t_list *lst);
 ```
+
 **Description**  
 **lst**의 길이를 구해서 반환해줍니다.
 
@@ -632,6 +659,7 @@ int    ft_lstsize(t_list *lst);
 ```c
 void    ft_lstadd_front(t_list **lst, t_list *new);
 ```
+
 **Description**  
 **lst** 리스트 앞에 **new** 요소를 붙여 줍니다.
 
@@ -652,6 +680,7 @@ void    ft_lstadd_front(t_list **lst, t_list *new);
 ```c
 void    ft_lstadd_back(t_list **lst, t_list *new);
 ```
+
 **Description**  
 **lst** 리스트 뒤에 **new** 요소를 붙여 줍니다.
 
@@ -672,6 +701,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
+
 **Description**  
 **lst** 요소를 삭제합니다.  
 **lst->content**에 **del**을 적용해주고 **lst**를 free합니다.  
@@ -695,6 +725,7 @@ void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```c
 void    ft_lstclear(t_list **lst, void (*del)(void*));
 ```
+
 **Description**  
 **lst** 의 content를 지워줍니다.(리스트를 초기화 해줍니다.)  
 **lst->next**는 free하지 않습니다. 
@@ -715,6 +746,7 @@ void    ft_lstclear(t_list **lst, void (*del)(void*));
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```
+
 **Description**  
 리스트를 순회하면서 **lst**에 **f**를 적용해줍니다.
 
@@ -735,6 +767,7 @@ void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```c
 t_list    *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
+
 **Description**  
 리스트를 순회하면서 **lst**에 **f**를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. 
 
@@ -757,7 +790,7 @@ lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 
 > 개인적으로 필요한 함수들을 모아둔 파트입니다.
 
 ### ft_islower
-> is lower
+> is lower case character
 
 **Prototype Declaration**  
 ```c
@@ -769,12 +802,17 @@ int    ft_islower(int c);
 
 
 **Return**  
-소문자이면 **1**, 아니면 **0**을 반환
+소문자이면     1
+소문자가 아니면 0
+
+
+**Ussage**  
+소문자인지 아닌지 알고 싶을 때
 
 ---
 
 ### ft_isupper
-> is upper
+> is upper case character
 
 **Prototype Declaration**  
 ```c
@@ -786,7 +824,12 @@ int    ft_isupper(int c);
 
 
 **Return**  
-대문자이면 **1**, 아니면 **0**을 반환
+대문자이면     1
+대문자가 아니면 0
+
+
+**Ussage**  
+대문자인지 아닌지 알고 싶을 때
 
 ---
 
