@@ -6,16 +6,17 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:19 by ykoh              #+#    #+#             */
-/*   Updated: 2020/03/06 15:02:37 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/10 16:21:03 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
-int	ft_atoi (const char *str)
+int	ft_atoi(const char *str)
 {
-	char	neg;
-	int	num;
+	char				neg;
+	unsigned long long	num;
 
 	while (ft_isspace(*str))
 		str++;
@@ -28,5 +29,9 @@ int	ft_atoi (const char *str)
 		num = num * 10 + (*str - '0');
 		str++;
 	}
+	if (num > LONG_MAX - 1 && neg == 1)
+		return (0);
+	if (num > LONG_MAX && neg == 0)
+		return (-1);
 	return (neg ? -num : num);
 }
