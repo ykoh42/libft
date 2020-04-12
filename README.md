@@ -31,20 +31,20 @@ later
 ### ft_memset
 > memory set
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_memset(void *b, int c, size_t len);
 ```
 
-**Description**  
-메모리 영역 **b**의 **len** byte까지를 **c**로 초기화합니다.
+`Description`  
+메모리 영역 `b`의 `len` byte까지를 `c`로 초기화합니다.
 
 
-**Return**  
-메모리 영역 **b**의 포인터를 반환
+`Return`  
+메모리 영역 `b`의 포인터를 반환
 
 
-**Ussage**  
+`Ussage`  
 메모리 영역을 특정 문자로 초기화할 때
 
 ---
@@ -52,21 +52,21 @@ void    *ft_memset(void *b, int c, size_t len);
 ### ft_bzero
 > byte zero
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    ft_bzero(void *s, size_t n);
 ```
 
-**Description**  
-메모리 영역 **s**의 **n** bytes까지를 **0**으로 초기화합니다.
+`Description`  
+메모리 영역 `s`의 `n` bytes까지를 `0`으로 초기화합니다.
 초기화 용도로 사용되며, memset과 동일한 역할을 합니다.
 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
+`Ussage`  
 메모리 영역을 0으로 초기화할 때
 
 ---
@@ -74,65 +74,65 @@ void    ft_bzero(void *s, size_t n);
 ### ft_memchr
 > memory character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_memchr(const void *s, int c, size_t n);
 ```
 
-**Description**  
-**n** bytes 까지의 메모리 영역 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
+`Description`  
+`n` bytes 까지의 메모리 영역 `s`에서 문자 `c`가 처음 발견된 곳의 포인터를 반환한다.
 
 
-**Return**  
-처음으로 값 **c**가 나타나는 포인터
+`Return`  
+처음으로 값 `c`가 나타나는 포인터
 
 
-**Ussage**  
-메모리영역에서 값 **c**의 위치를 찾아낼 때
+`Ussage`  
+메모리영역에서 값 `c`의 위치를 찾아낼 때
 
 ---
 
 ### ft_memcpy
 > memory copy
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 ```
 
-**Description**  
-메모리 영역 **src**의 **n** bytes만큼을 **dst**로 복사합니다.
+`Description`  
+메모리 영역 `src`의 `n` bytes만큼을 `dst`로 복사합니다.
 절대 src와 dst의 메모리 영역이 겹쳐서는 안됩니다.
 메모리 영역이 겹치면, memcpy 대신 memmove를 사용해야합니다.
 
 
-**Return**  
-메모리 영역 **dst**의 포인터를 반환
+`Return`  
+메모리 영역 `dst`의 포인터를 반환
 
 
-**Ussage**  
-메모리영역을 **n**만큼 복사할 때
+`Ussage`  
+메모리영역을 `n`만큼 복사할 때
 
 ---
 
 ### ft_memccpy
-> memory copy until **c** found
+> memory copy until `c` found
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 ```
 
-**Description**  
-메모리 영역 **src**에서 **dst**로 **n** bytes만큼 복사하는데, **src**에서 **c**가 나타날 때까지만 복사합니다(첫번째 **c**도 복사함).
-절대 **src**와 **dst**의 메모리 영역이 **겹쳐서는 안됩니다**.
+`Description`  
+메모리 영역 `src`에서 `dst`로 `n` bytes만큼 복사하는데, `src`에서 `c`가 나타날 때까지만 복사합니다(첫번째 `c`도 복사함).
+절대 `src`와 `dst`의 메모리 영역이 `겹쳐서는 안됩니다`.
 
 
-**Return**  
+`Return`  
 복사된 메모리 영역 dst의 다음 포인터(+1)
 
 
-**Ussage**  
+`Ussage`  
 특정 문자까지만 복사하고 싶을 때(?)
 >:warning: 리턴 값은 어떻게 활용되는지 잘 모르겠습니다... 알려주세요.. 왜 리턴 값이 굳이 카피한 만큼의 다음 포인터일까요? 어떤 목적이 있을 것같긴한데..
 
@@ -141,45 +141,45 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 ### ft_memmove
 > memory move
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_memmove(void *dst, const void *src, size_t len);
 ```
 
-**Description**  
-메모리 영역 **src**의 **len** bytes만큼을 **dst**로 복사합니다.
-memcpy와 동일하나, **src**와 **dst**의 메모리 영역이 겹칠 때 사용합니다.
+`Description`  
+메모리 영역 `src`의 `len` bytes만큼을 `dst`로 복사합니다.
+memcpy와 동일하나, `src`와 `dst`의 메모리 영역이 겹칠 때 사용합니다.
 
 
-**Return**  
-메모리 영역 **dst**
+`Return`  
+메모리 영역 `dst`
 
 
-**Ussage**  
-메모리 영역을 **len**만큼 복사할 때
-**src**와 **dst**의 메모리 영역이 겹칠 때
+`Ussage`  
+메모리 영역을 `len`만큼 복사할 때
+`src`와 `dst`의 메모리 영역이 겹칠 때
 
 ---
 
 ### ft_memcmp
 > memory compare 
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
 
-**Description**  
-메모리 영역 **s1**과 **s2**를 **n** bytes까지 비교합니다.
+`Description`  
+메모리 영역 `s1`과 `s2`를 `n` bytes까지 비교합니다.
 
 
-**Return**  
-**s1**이 크면 양수  
-**s2**가 크면 음수  
+`Return`  
+`s1`이 크면 양수  
+`s2`가 크면 음수  
 같으면 0  
 
 
-**Ussage**  
+`Ussage`  
 메모리 영역을 비교할 때
 정렬에서 비교가 필요할 때
 
@@ -188,38 +188,38 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ### ft_strlen
 > string length
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 size_t    ft_strlen(const char *s);
 ```
 
-**Description**  
-문자열 **s**의 길이를 구합니다.
+`Description`  
+문자열 `s`의 길이를 구합니다.
 
 
-**Return**  
-문자열 **s**의 길이
+`Return`  
+문자열 `s`의 길이
 
 ---
 
 ### ft_strlcpy
 > string l copy
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 size_t    ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
 
-**Description**  
-문자열 **src**에서 **dst**로 **dstsize** bytes 만큼 복사합니다.
+`Description`  
+문자열 `src`에서 `dst`로 `dstsize` bytes 만큼 복사합니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcpy 입니다.
 
 
-**Return**  
-**src**의 길이(복사를 시도하려고 하는 길이)
+`Return`  
+`src`의 길이(복사를 시도하려고 하는 길이)
 
 
-**Ussage**  
+`Ussage`  
 문자열을 복사할 때
 memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 
@@ -228,21 +228,21 @@ memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 ### ft_strlcat
 > string l cat
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 size_t    ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 ```
 
-**Description**  
-문자열 **dst** 뒤에 **src**를 이어 붙여주는데, **dstsize** bytes 만큼만 이어붙여줍니다.
+`Description`  
+문자열 `dst` 뒤에 `src`를 이어 붙여주는데, `dstsize` bytes 만큼만 이어붙여줍니다.
 문자열 끝에 NUL문자(\0)가 보장된 strcat 입니다. (dstsize의 제일 마지막에 \0을 붙임)
 
 
-**Return**  
+`Return`  
 만드려고 시도했던 최종 문자열의 길이(?)
 
 
-**Ussage**  
+`Ussage`  
 NUL이 보장되는 strcat이 필요할 때
 하지만, 리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
 
@@ -251,22 +251,22 @@ NUL이 보장되는 strcat이 필요할 때
 ### ft_strchr
 > string chracter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 char    *ft_strchr(const char *s, int c);
 ```
 
-**Description**  
-문자열 **s**에서 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
-**s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
+`Description`  
+문자열 `s`에서 문자 `c`가 처음 발견된 곳의 포인터를 반환한다.
+`s` 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
 
 
-**Return**  
-문자 **c**가 처음 발견된 곳의 포인터
-문자열 **s**에 문자 **c**가 없으면 NULL 포인터
+`Return`  
+문자 `c`가 처음 발견된 곳의 포인터
+문자열 `s`에 문자 `c`가 없으면 NULL 포인터
 
 
-**Ussage**  
+`Ussage`  
 문자열 앞에서부터 특정 문자를 찾을 떄
 
 ---
@@ -274,22 +274,22 @@ char    *ft_strchr(const char *s, int c);
 ### ft_strrchr
 > string reverse(rear(?)) chracter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 char    *ft_strrchr(const char *s, int c);
 ```
 
-**Description**  
-문자열 **s**의 **뒤에서부터** 문자 **c**가 처음 발견된 곳의 포인터를 반환한다.
-**s** 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
+`Description`  
+문자열 `s`의 `뒤에서부터` 문자 `c`가 처음 발견된 곳의 포인터를 반환한다.
+`s` 가 정상적인 문자열이 아닐 경우, 문제가 생길 수 있음.
 
 
-**Return**  
-뒤에서부터 문자 **c**가 처음 발견된 곳의 포인터
-문자열 **s**에 문자 **c**가 없으면 NULL 포인터
+`Return`  
+뒤에서부터 문자 `c`가 처음 발견된 곳의 포인터
+문자열 `s`에 문자 `c`가 없으면 NULL 포인터
 
 
-**Ussage**  
+`Ussage`  
 문자열 뒤에서부터 특정 문자를 찾을 떄
 
 여기까지 커밋
@@ -299,16 +299,16 @@ char    *ft_strrchr(const char *s, int c);
 ### ft_strnstr
 > 
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 
 ```
 
-**Description**  
+`Description`  
 
 
 
-**Return**  
+`Return`  
 
 
 ---
@@ -316,18 +316,18 @@ char    *ft_strrchr(const char *s, int c);
 ### ft_strncmp
 > string n compare
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 ```
 
-**Description**  
-문자열 **s1**과 문자열 **s2**를 **n**만큼 비교해줍니다.
+`Description`  
+문자열 `s1`과 문자열 `s2`를 `n`만큼 비교해줍니다.
 
 
-**Return**  
-**s1**이 크면 양수  
-**s2**가 크면 음수  
+`Return`  
+`s1`이 크면 양수  
+`s2`가 크면 음수  
 같으면 0   
 
 ---
@@ -335,20 +335,20 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 ### ft_atoi
 > ascii to int
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_atoi(const char *str);
 ```
 
-**Description**  
-문자열 **str**을 정수로 바꿔줍니다.
+`Description`  
+문자열 `str`을 정수로 바꿔줍니다.
 
 
-**Return**  
-문자열에 **str**에 해당하는 정수
+`Return`  
+문자열에 `str`에 해당하는 정수
 
 
-**Ussage**  
+`Ussage`  
 문자로된 숫자를 진짜 숫자로 바꿔줄 때
 
 ---
@@ -356,22 +356,22 @@ int    ft_atoi(const char *str);
 ### ft_isalpha
 > is alphabetic character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isalpha(int c);
 ```
 
-**Description**  
-**c**가 알파벳 문자인지 아닌지 확인해줍니다.  
+`Description`  
+`c`가 알파벳 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 알파벳이면     1  
 알파벳이 아니면 0  
 
 
-**Ussage**  
+`Ussage`  
 알파벳 문자인지 아닌지 확인해야할 떄
 
 ---
@@ -379,22 +379,22 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_isdigit
 > is digit character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isdigit(int c);
 ```
 
-**Description**  
-**c**가 숫자 문자인지 아닌지 확인해줍니다.  
+`Description`  
+`c`가 숫자 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 숫자면      1  
 숫자가 아니면 0  
 
 
-**Ussage**  
+`Ussage`  
 숫자 문자인지 아닌지 확인해야 할 때
 
 ---
@@ -402,21 +402,21 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_isalnum
 > is alphanumeric character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isalnum(int c);
 ```
 
-**Description**  
-**c**가 알파벳 또는 숫자 문자인지 아닌지 확인해줍니다.  
+`Description`  
+`c`가 알파벳 또는 숫자 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 알파벳이나 숫자면      1
 알파벳이나 숫자가 아니면 0
 
-**Ussage**  
+`Ussage`  
 알파벳이랑 숫자만 골라내고 싶을 때
 
 ---
@@ -424,22 +424,22 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_isascii
 > is ASCII charecter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isascii(int c);
 ```
 
-**Description**  
-**c**가 ASCII 문자인지 아닌지 확인해줍니다.  
+`Description`  
+`c`가 ASCII 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 ASCII 문자면      1
 ASCII 문자가 아니면 0
 
 
-**Ussage**  
+`Ussage`  
 아스키 문자인지 아닌지 확인하고 싶을 때
 
 ---
@@ -447,22 +447,22 @@ ASCII 문자가 아니면 0
 ### ft_isprint
 > is printable charecter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isprint(int c);
 ```
 
-**Description**  
-**c**가 출력 가능한 문자인지 아닌지 확인해줍니다.  
+`Description`  
+`c`가 출력 가능한 문자인지 아닌지 확인해줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 출력 가능한 문자면      1
 출력 가능한 문자가 아니면 0
 
 
-**Ussage**  
+`Ussage`  
 출력할 수 있는 문자인지 아닌지 확인하고 싶을 때
 
 ---
@@ -470,21 +470,21 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_toupper
 > to upper case charecter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_toupper(int c)
 ```
 
-**Description**  
-**c**가 소문자면 대문자로 바꿔줍니다.  
+`Description`  
+`c`가 소문자면 대문자로 바꿔줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 대문자로 변환된 문자(int)
 
 
-**Ussage**  
+`Ussage`  
 소문자를 대문자로 바꾸고 싶을 때
 
 ---
@@ -492,21 +492,21 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_tolower
 > to lower case charecter
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_tolower(int c);
 ```
 
-**Description**  
-**c**가 대문자면 소문자로 바꿔줍니다.  
+`Description`  
+`c`가 대문자면 소문자로 바꿔줍니다.  
 EOF(-1)를 처리해주기 위해 int로 받습니다.  
 
 
-**Return**  
+`Return`  
 소문자로 변환된 문자(int)
 
 
-**Ussage**  
+`Ussage`  
 대문자를 소문자로 바꾸고 싶을 때
 
 ---
@@ -514,21 +514,21 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 ### ft_calloc
 > contiguous allocation
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    *ft_calloc(size_t count, size_t size);
 ```
 
-**Description**  
-0으로 초기화된 연속적인 메모리공간(**count** x **size**)을 할당해줍니다.
+`Description`  
+0으로 초기화된 연속적인 메모리공간(`count` x `size`)을 할당해줍니다.
 
 
-**Return**  
+`Return`  
 할당 성공시 할당된 공간의 포인터  
 할당 실패시 NULL 포인터
 
 
-**Ussage**  
+`Ussage`  
 메모리 할당과 동시에 초기화가 필요할 때
 
 ---
@@ -536,20 +536,20 @@ void    *ft_calloc(size_t count, size_t size);
 ### ft_strdup
 > string duplicate
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 char    *ft_strdup(const char *s1);
 ```
 
-**Description**  
-문자열 **s1**을 복제해줍니다.
+`Description`  
+문자열 `s1`을 복제해줍니다.
 
 
-**Return**  
+`Return`  
 복제한 문자열의 포인터
 
 
-**Ussage**  
+`Ussage`  
 문자열을 복제하고 싶을 때
 
 ---
@@ -562,20 +562,20 @@ char    *ft_strdup(const char *s1);
 ### 
 > 
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 
 ```
 
-**Description**  
+`Description`  
 
 
 
-**Return**  
+`Return`  
 
 
 
-**Ussage**  
+`Ussage`  
 
 
 ---
@@ -595,20 +595,20 @@ typedef struct      s_list
 ### ft_lstnew
 > list new
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 t_list    *ft_lstnew(void *content);
 ```
 
-**Description**  
-**content**의 내용으로 새로운 요소(element)를 만들어 줍니다.  
-**content**가 NULL일 때도 **content**가 NULL인 요소를 만들어 줍니다.
+`Description`  
+`content`의 내용으로 새로운 요소(element)를 만들어 줍니다.  
+`content`가 NULL일 때도 `content`가 NULL인 요소를 만들어 줍니다.
 
-**Return**  
+`Return`  
 새로 만들어진 요소의 포인터를 반환합니다.
 
 
-**Ussage**  
+`Ussage`  
 새로운 요소(element)를 만들고 싶을 때
 
 ---
@@ -616,20 +616,20 @@ t_list    *ft_lstnew(void *content);
 ### ft_lstlast
 > list last
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 t_list    *ft_lstlast(t_list *lst);
 ```
 
-**Description**  
-**lst**의 마지막 요소를 찾아줍니다.
+`Description`  
+`lst`의 마지막 요소를 찾아줍니다.
 
 
-**Return**  
-**Lst** 마지막 요소의 포인터
+`Return`  
+`Lst` 마지막 요소의 포인터
 
 
-**Ussage**  
+`Ussage`  
 리스트의 마지막 요소에 접근하고 싶을 때  
 마지막 요소에 접근해서 무언가 하고 싶을 때  
 
@@ -638,20 +638,20 @@ t_list    *ft_lstlast(t_list *lst);
 ### ft_lstsize
 > list size
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_lstsize(t_list *lst);
 ```
 
-**Description**  
-**lst**의 길이를 구해서 반환해줍니다.
+`Description`  
+`lst`의 길이를 구해서 반환해줍니다.
 
 
-**Return**  
-**lst**의 길이
+`Return`  
+`lst`의 길이
 
 
-**Ussage**  
+`Ussage`  
 리스트의 길이를 구하고 싶을 때
 
 ---
@@ -659,64 +659,64 @@ int    ft_lstsize(t_list *lst);
 ### ft_lstadd_front
 > list add front
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
-void    ft_lstadd_front(t_list **lst, t_list *new);
+void    ft_lstadd_front(t_list `lst, t_list *new);
 ```
 
-**Description**  
-**lst** 리스트 앞에 **new** 요소를 붙여 줍니다.
+`Description`  
+`lst` 리스트 앞에 `new` 요소를 붙여 줍니다.
 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
-리스트 **앞에** 새로운 요소를 이어 붙이고 싶을 때
+`Ussage`  
+리스트 `앞에` 새로운 요소를 이어 붙이고 싶을 때
 
 ---
 
 ### ft_lstadd_back
 > list add back
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
-void    ft_lstadd_back(t_list **lst, t_list *new);
+void    ft_lstadd_back(t_list `lst, t_list *new);
 ```
 
-**Description**  
-**lst** 리스트 뒤에 **new** 요소를 붙여 줍니다.
+`Description`  
+`lst` 리스트 뒤에 `new` 요소를 붙여 줍니다.
 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
-리스트 **뒤에** 새로운 요소를 이어 붙이고 싶을 때
+`Ussage`  
+리스트 `뒤에` 새로운 요소를 이어 붙이고 싶을 때
 
 ---
 
 ### ft_lstdelone
 > list delete one
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
 
-**Description**  
-**lst** 요소를 삭제합니다.  
-**lst->content**에 **del**을 적용해주고 **lst**를 free합니다.  
-**lst->next**는 free하지 않습니다.  
+`Description`  
+`lst` 요소를 삭제합니다.  
+`lst->content`에 `del`을 적용해주고 `lst`를 free합니다.  
+`lst->next`는 free하지 않습니다.  
 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
+`Ussage`  
 요소의 content을 지우고 싶을 때
 
 
@@ -725,20 +725,20 @@ void    ft_lstdelone(t_list *lst, void (*del)(void*));
 ### ft_lstclear
 > lst clear
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
-void    ft_lstclear(t_list **lst, void (*del)(void*));
+void    ft_lstclear(t_list `lst, void (*del)(void*));
 ```
 
-**Description**  
-**lst** 의 content를 지워줍니다.(리스트를 초기화 해줍니다.)  
-**lst->next**는 free하지 않습니다. 
+`Description`  
+`lst` 의 content를 지워줍니다.(리스트를 초기화 해줍니다.)  
+`lst->next`는 free하지 않습니다. 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
+`Ussage`  
 리스트 전체를 지우고 싶을 때
 
 ---
@@ -746,20 +746,20 @@ void    ft_lstclear(t_list **lst, void (*del)(void*));
 ### ft_lstiter
 > list iteration
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```
 
-**Description**  
-리스트를 순회하면서 **lst**에 **f**를 적용해줍니다.
+`Description`  
+리스트를 순회하면서 `lst`에 `f`를 적용해줍니다.
 
 
-**Return**  
+`Return`  
 없음
 
 
-**Ussage**  
+`Ussage`  
 리스트 전체에 함수를 적용하고 싶을 때
 
 ---
@@ -767,24 +767,24 @@ void    ft_lstiter(t_list *lst, void (*f)(void *));
 ### ft_lstmap
 > list mapping
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 t_list    *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 
-**Description**  
-리스트를 순회하면서 **lst**에 **f**를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. 
+`Description`  
+리스트를 순회하면서 `lst`에 `f`를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. 
 
 
-**Return**  
-**f**가 적용된 리스트의 포인터
+`Return`  
+`f`가 적용된 리스트의 포인터
 
 
-**Ussage**  
-리스트에서 **f**가 적용된 리스트들만 추리고 싶을 때  
+`Ussage`  
+리스트에서 `f`가 적용된 리스트들만 추리고 싶을 때  
 
 
-lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 있는 **f**이기 때문에 함수의 적용여부를 확인 할 수 있음(?)  
+lstiter는 반환형이 없는 `f`를 사용하였고, lstmap은 반환형이 있는 `f`이기 때문에 함수의 적용여부를 확인 할 수 있음(?)  
 그래서 함수가 적용된 리스트만 반환할 수 있다(?) 그럼 아얘 용도가 사라진 원 리스트의 next는 어떻게 되는 것이지,,?  
 
 
@@ -796,21 +796,21 @@ lstiter는 반환형이 없는 **f**를 사용하였고, lstmap은 반환형이 
 ### ft_islower
 > is lower case character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_islower(int c);
 ```
 
-**Description**  
-**c**가 소문자인지 아닌지 확인합니다.
+`Description`  
+`c`가 소문자인지 아닌지 확인합니다.
 
 
-**Return**  
+`Return`  
 소문자이면     1
 소문자가 아니면 0
 
 
-**Ussage**  
+`Ussage`  
 소문자인지 아닌지 알고 싶을 때
 
 ---
@@ -818,21 +818,21 @@ int    ft_islower(int c);
 ### ft_isupper
 > is upper case character
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 int    ft_isupper(int c);
 ```
 
-**Description**  
-**c**가 대문자인지 아닌지 확인합니다.
+`Description`  
+`c`가 대문자인지 아닌지 확인합니다.
 
 
-**Return**  
+`Return`  
 대문자이면     1
 대문자가 아니면 0
 
 
-**Ussage**  
+`Ussage`  
 대문자인지 아닌지 알고 싶을 때
 
 ---
@@ -840,20 +840,20 @@ int    ft_isupper(int c);
 ### ft_strnlen
 > string n length
 
-**Prototype Declaration**  
+`Prototype Declaration`  
 ```c
 size_t    ft_strnlen(const char *s, size_t maxlen);
 ```
-**Description**  
-문자열 **s**에서 **maxlen**까지의 길이를 구합니다.
+`Description`  
+문자열 `s`에서 `maxlen`까지의 길이를 구합니다.
 
 
-**Return**  
-문자열 **s**에서 **maxlen**까지의 길이
+`Return`  
+문자열 `s`에서 `maxlen`까지의 길이
 
 
-**Ussage**  
-문자열의 길이를 **maxlen**까지만 알고 싶을 때
+`Ussage`  
+문자열의 길이를 `maxlen`까지만 알고 싶을 때
 
 ---
 
