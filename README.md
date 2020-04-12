@@ -47,7 +47,6 @@ void    *ft_memset(void *b, int c, size_t len);
 **Ussage**  
 메모리 영역을 특정 문자로 초기화할 때
 
-
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
 </div>
@@ -73,10 +72,12 @@ void    ft_bzero(void *s, size_t n);
 
 **Ussage**  
 메모리 영역을 0으로 초기화할 때
-<br/>
+
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
 </div>
+
+---
 
 ### ft_memchr
 > memory character
@@ -96,6 +97,10 @@ void    *ft_memchr(const void *s, int c, size_t n);
 
 **Ussage**  
 메모리영역에서 값 `c`의 위치를 찾아낼 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -120,6 +125,10 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 **Ussage**  
 메모리영역을 `n`만큼 복사할 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_memccpy
@@ -143,6 +152,10 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 특정 문자까지만 복사하고 싶을 때(?)
 >:warning: 리턴 값은 어떻게 활용되는지 잘 모르겠습니다... 알려주세요.. 왜 리턴 값이 굳이 카피한 만큼의 다음 포인터일까요? 어떤 목적이 있을 것같긴한데..
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_memmove
@@ -165,6 +178,10 @@ memcpy와 동일하나, `src`와 `dst`의 메모리 영역이 겹칠 때 사용�
 **Ussage**  
 메모리 영역을 `len`만큼 복사할 때
 `src`와 `dst`의 메모리 영역이 겹칠 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -190,6 +207,10 @@ int    ft_memcmp(const void *s1, const void *s2, size_t n);
 메모리 영역을 비교할 때
 정렬에서 비교가 필요할 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strlen
@@ -206,6 +227,10 @@ size_t    ft_strlen(const char *s);
 
 **Return**  
 문자열 `s`의 길이
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -230,6 +255,10 @@ size_t    ft_strlcpy(char * restrict dst, const char * restrict src, size_t dsts
 문자열을 복사할 때
 memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strlcat
@@ -253,6 +282,10 @@ size_t    ft_strlcat(char * restrict dst, const char * restrict src, size_t dsts
 NUL이 보장되는 strcat이 필요할 때
 하지만, 리턴 값이 어떻게 사용되고 왜 그렇게 되는지 이해가 안됩니다..
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strchr
@@ -275,6 +308,10 @@ char    *ft_strchr(const char *s, int c);
 
 **Ussage**  
 문자열 앞에서부터 특정 문자를 찾을 떄
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -301,6 +338,10 @@ char    *ft_strrchr(const char *s, int c);
 
 여기까지 커밋
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strnstr
@@ -317,6 +358,10 @@ char    *ft_strrchr(const char *s, int c);
 
 **Return**  
 
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -336,6 +381,10 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 `s1`이 크면 양수  
 `s2`가 크면 음수  
 같으면 0   
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -357,6 +406,10 @@ int    ft_atoi(const char *str);
 
 **Ussage**  
 문자로된 숫자를 진짜 숫자로 바꿔줄 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -381,6 +434,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 **Ussage**  
 알파벳 문자인지 아닌지 확인해야할 떄
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_isdigit
@@ -404,6 +461,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 **Ussage**  
 숫자 문자인지 아닌지 확인해야 할 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_isalnum
@@ -425,6 +486,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 
 **Ussage**  
 알파벳이랑 숫자만 골라내고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -449,6 +514,10 @@ ASCII 문자가 아니면 0
 **Ussage**  
 아스키 문자인지 아닌지 확인하고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_isprint
@@ -472,6 +541,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 **Ussage**  
 출력할 수 있는 문자인지 아닌지 확인하고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_toupper
@@ -493,6 +566,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 
 **Ussage**  
 소문자를 대문자로 바꾸고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -516,6 +593,10 @@ EOF(-1)를 처리해주기 위해 int로 받습니다.
 **Ussage**  
 대문자를 소문자로 바꾸고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_calloc
@@ -538,6 +619,10 @@ void    *ft_calloc(size_t count, size_t size);
 **Ussage**  
 메모리 할당과 동시에 초기화가 필요할 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strdup
@@ -559,10 +644,18 @@ char    *ft_strdup(const char *s1);
 **Ussage**  
 문자열을 복제하고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ## Part 2 - Additional functions
 > libc에는 없지만, 유용한 함수들을 모아둔 파트입니다.
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -584,6 +677,10 @@ char    *ft_strdup(const char *s1);
 
 **Ussage**  
 
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -618,6 +715,10 @@ t_list    *ft_lstnew(void *content);
 **Ussage**  
 새로운 요소(element)를 만들고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_lstlast
@@ -640,6 +741,10 @@ t_list    *ft_lstlast(t_list *lst);
 리스트의 마지막 요소에 접근하고 싶을 때  
 마지막 요소에 접근해서 무언가 하고 싶을 때  
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_lstsize
@@ -660,6 +765,10 @@ int    ft_lstsize(t_list *lst);
 
 **Ussage**  
 리스트의 길이를 구하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -682,6 +791,10 @@ void    ft_lstadd_front(t_list `lst, t_list *new);
 **Ussage**  
 리스트 `앞에` 새로운 요소를 이어 붙이고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_lstadd_back
@@ -702,6 +815,10 @@ void    ft_lstadd_back(t_list `lst, t_list *new);
 
 **Ussage**  
 리스트 `뒤에` 새로운 요소를 이어 붙이고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -727,6 +844,10 @@ void    ft_lstdelone(t_list *lst, void (*del)(void*));
 요소의 content을 지우고 싶을 때
 
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_lstclear
@@ -748,6 +869,10 @@ void    ft_lstclear(t_list `lst, void (*del)(void*));
 **Ussage**  
 리스트 전체를 지우고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_lstiter
@@ -768,6 +893,10 @@ void    ft_lstiter(t_list *lst, void (*f)(void *));
 
 **Ussage**  
 리스트 전체에 함수를 적용하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
@@ -795,6 +924,10 @@ lstiter는 반환형이 없는 `f`를 사용하였고, lstmap은 반환형이 �
 그래서 함수가 적용된 리스트만 반환할 수 있다(?) 그럼 아얘 용도가 사라진 원 리스트의 next는 어떻게 되는 것이지,,?  
 
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ## EXTRA
@@ -820,6 +953,10 @@ int    ft_islower(int c);
 **Ussage**  
 소문자인지 아닌지 알고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_isupper
@@ -842,6 +979,10 @@ int    ft_isupper(int c);
 **Ussage**  
 대문자인지 아닌지 알고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
 ---
 
 ### ft_strnlen
@@ -861,6 +1002,10 @@ size_t    ft_strnlen(const char *s, size_t maxlen);
 
 **Ussage**  
 문자열의 길이를 `maxlen`까지만 알고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
 
 ---
 
