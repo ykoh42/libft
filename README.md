@@ -345,11 +345,11 @@ char    *ft_strrchr(const char *s, int c);
 ---
 
 ### ft_strnstr
-> 
+> string n string
 
 **Prototype Declaration**  
 ```c
-
+char    *strnstr(const char *haystack, const char *needle, size_t len);ss
 ```
 
 **Description**  
@@ -653,30 +653,251 @@ char    *ft_strdup(const char *s1);
 ## Part 2 - Additional functions
 > libc에는 없지만, 유용한 함수들을 모아둔 파트입니다.
 
+---
+
+### ft_substr
+> 
+
+**Prototype Declaration**  
+```c
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
 </div>
 
 ---
 
-### 
+### ft_strjoin
 > 
 
 **Prototype Declaration**  
 ```c
-
+char    *ft_strjoin(char const *s1, char const *s2);
 ```
 
 **Description**  
-
+문자열 `s1`을 복제해줍니다.
 
 
 **Return**  
-
+복제한 문자열의 포인터
 
 
 **Ussage**  
+문자열을 복제하고 싶을 때
 
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_strtrim
+> 
+
+**Prototype Declaration**  
+```c
+char    *ft_strtrim(char const *s1, char const *set);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_split
+> 
+
+**Prototype Declaration**  
+```c
+char    **ft_split(char const *s, char c);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_itoa
+> 
+
+**Prototype Declaration**  
+```c
+char    *ft_itoa(int n);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_strmapi
+> 
+
+**Prototype Declaration**  
+```c
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_putchar_fd
+> 
+
+**Prototype Declaration**  
+```c
+void    ft_putchar_fd(char c, int fd);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_putstr_fd
+> 
+
+**Prototype Declaration**  
+```c
+void    ft_putstr_fd(char *s, int fd);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_putendl_fd
+> 
+
+**Prototype Declaration**  
+```c
+void    ft_putendl_fd(char *s, int fd);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_putnbr_fd
+> 
+
+**Prototype Declaration**  
+```c
+void    ft_putnbr_fd(int n, int fd);
+```
+
+**Description**  
+문자열 `s1`을 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 복제하고 싶을 때
 
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
