@@ -336,8 +336,6 @@ char    *ft_strrchr(const char *s, int c);
 **Ussage**  
 문자열 뒤에서부터 특정 문자를 찾을 떄
 
-여기까지 커밋
-
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
 </div>
@@ -349,15 +347,19 @@ char    *ft_strrchr(const char *s, int c);
 
 **Prototype Declaration**  
 ```c
-char    *strnstr(const char *haystack, const char *needle, size_t len);ss
+char    *strnstr(const char *haystack, const char *needle, size_t len);
 ```
 
 **Description**  
-
+문자열 `haystack`에서 `needle`을 찾아주는데, `len`길이까지만 찾아 줍니다.
 
 
 **Return**  
+`haystack` 에서 찾은 문자열의 포인터
 
+
+**Ussage**  
+문자열에서 특정 문자열이 포함되어 있는지 확인하고 싶을 때
 
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
@@ -381,6 +383,10 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 `s1`이 크면 양수  
 `s2`가 크면 음수  
 같으면 0   
+
+
+**Ussage**  
+두 문자열을 비교하고 싶을 때
 
 <div align="right">
     <b><a href="#Contents">↥ back to top</a></b>
