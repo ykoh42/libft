@@ -669,14 +669,15 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 ```
 
 **Description**  
-
+문자열 `s`에서 `start` index부터 `len`개 만큼의 부분 문자열을 만들어(복제해) 줍니다.
 
 
 **Return**  
-
+만들어진(복제된) 부분 문자열의 포인터
 
 
 **Ussage**  
+원래 문자열은 그대로 두고 특정부분만 따서 새로운 문자열을 만들고 싶을 때
 
 
 <div align="right">
@@ -1158,6 +1159,32 @@ lstiter는 반환형이 없는 `f`를 사용하였고, lstmap은 반환형이 �
 
 ## EXTRA
 > 개인적으로 필요한 함수들을 모아둔 파트입니다.
+
+### ft_islower
+> is space character
+
+**Prototype Declaration**  
+```c
+int    ft_isspace(int c);
+```
+
+**Description**  
+`c`가 공백문자인지 아닌지 확인합니다.
+
+
+**Return**  
+공백문자이면     1
+공백문자가 아니면 0
+
+
+**Ussage**  
+공백문자인지 아닌지 알고 싶을 때
+
+<div align="right">
+    <b><a href="#Contents">↥ back to top</a></b>
+</div>
+
+---
 
 ### ft_islower
 > is lower case character
