@@ -721,15 +721,16 @@ char    *ft_strtrim(char const *s1, char const *set);
 ```
 
 **Description**  
-
+문자열 `s1`의 앞 뒤로 `set`에 들어 있는 문자들을 제거해주고, 새로운 문자열로 반환해줍니다.  
 
 
 **Return**  
-
+`s1` 앞 뒤로 `set`에 들어 있는 문자들이 제거된 새로운 문자열  
 
 
 **Ussage**  
-
+특정 문자들을 기준으로 앞뒤 내용을 잘라내고 싶을 때(?)  
+정확히 어떤 경우 사용하기에 좋은지 모르겠다..  
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
@@ -738,7 +739,7 @@ char    *ft_strtrim(char const *s1, char const *set);
 ---
 
 ### ft_split
-> 
+> string split
 
 **Prototype Declaration**  
 ```c
@@ -746,7 +747,7 @@ char    **ft_split(char const *s, char c);
 ```
 
 **Description**  
-
+문자열 s1을 잘라서 새로운 문자열배열로 반환해줍니다.
 
 
 **Return**  
