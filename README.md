@@ -814,7 +814,7 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 ---
 
 ### ft_putchar_fd
-> 
+> put character
 
 **Prototype Declaration**  
 ```c
@@ -822,15 +822,15 @@ void    ft_putchar_fd(char c, int fd);
 ```
 
 **Description**  
-
+문자 `c`를 `fd`대로 출력해줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+문자를 출력하고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
@@ -839,7 +839,7 @@ void    ft_putchar_fd(char c, int fd);
 ---
 
 ### ft_putstr_fd
-> 
+> put string
 
 **Prototype Declaration**  
 ```c
@@ -847,15 +847,15 @@ void    ft_putstr_fd(char *s, int fd);
 ```
 
 **Description**  
-
+문자열 `s`를 `fd`대로 출력해줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+문자열을 출력하고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
@@ -864,7 +864,7 @@ void    ft_putstr_fd(char *s, int fd);
 ---
 
 ### ft_putendl_fd
-> 
+> put string end line
 
 **Prototype Declaration**  
 ```c
@@ -872,15 +872,15 @@ void    ft_putendl_fd(char *s, int fd);
 ```
 
 **Description**  
-
+문자열 `s`를 `fd`대로 출력해주고 개행(`\n`)을 붙여줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+문자열을 출력하고 개행해주고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
@@ -889,7 +889,7 @@ void    ft_putendl_fd(char *s, int fd);
 ---
 
 ### ft_putnbr_fd
-> 
+> put number
 
 **Prototype Declaration**  
 ```c
@@ -897,15 +897,15 @@ void    ft_putnbr_fd(int n, int fd);
 ```
 
 **Description**  
-
+숫자 `n`을 `fd`대로 출력해줍니다.
 
 
 **Return**  
-
+없음
 
 
 **Ussage**  
-
+숫자를 출력하고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
@@ -1257,6 +1257,30 @@ size_t    ft_strnlen(const char *s, size_t maxlen);
 
 **Ussage**  
 문자열의 길이를 `maxlen`까지만 알고 싶을 때
+
+<div align = "right">
+    <b><a href = "#Contents">↥ back to top</a></b>
+</div>
+
+---
+
+### ft_abs
+> absolute
+
+**Prototype Declaration**  
+```c
+int    ft_abs(int i);
+```
+**Description**  
+정수 `i`에 절대값을 반환해줍니다.
+
+
+**Return**  
+정수 `i`의 절대값
+
+
+**Ussage**  
+정수의 절대값을 구하고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
