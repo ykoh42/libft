@@ -1290,3 +1290,27 @@ int    ft_abs(int i);
 
 ---
 
+### ft_strrev
+> string reverse
+
+**Prototype Declaration**  
+```c
+char    *ft_strrev(char *str);
+```
+**Description**  
+문자열 `str`을 뒤집어 줍니다.
+
+
+**Return**  
+`str`을 뒤집어서 반환
+
+
+**Ussage**  
+문자열을 뒤집고 싶을 때
+
+<div align = "right">
+    <b><a href = "#Contents">↥ back to top</a></b>
+</div>
+
+---
+
