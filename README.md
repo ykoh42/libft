@@ -797,15 +797,17 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 ```
 
 **Description**  
-문자열 `s`를 순회하면서 `f`함수를 적용 시켜준 뒤, 새로운 문자열로 반환합니다.
+문자열 `s`를 순회하면서 각각의 문자를 `f`함수를 적용(mapping) 시켜준 뒤, 새로운 문자열로 반환합니다.(원본 문자열은 건드리지 않는다는 의미)
+`s`는 **문자열**, `f`의 `unsigned int`는 **index**, `char`는 index에 해당하는 문자입니다.
 
 
 **Return**  
-`f`함수가 적용된 새로운 문자열
+`f`함수로 mapping(적용)된 새로운 문자열
 
 
 **Ussage**  
-문자열의 모든 문자열에 동일한 함수를 적용하고 싶을 때(?)
+문자열의 모든 문자열에 동일한 함수를 적용하고 싶을 때  
+특정 index에 해당하는 값에만 매핑하고 싶을 때  
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
