@@ -1271,14 +1271,14 @@ size_t    ft_strnlen(const char *s, size_t maxlen);
 
 **Prototype Declaration**  
 ```c
-int    ft_abs(int i);
+int    ft_abs(int n);
 ```
 **Description**  
-정수 `i`에 절대값을 반환해줍니다.
+정수 `n`에 절대값을 반환해줍니다.
 
 
 **Return**  
-정수 `i`의 절대값
+정수 `n`의 절대값
 
 
 **Ussage**  
