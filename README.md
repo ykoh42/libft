@@ -764,7 +764,7 @@ char    **ft_split(char const *s, char c);
 ---
 
 ### ft_itoa
-> 
+> integer to ascii character
 
 **Prototype Declaration**  
 ```c
@@ -772,15 +772,15 @@ char    *ft_itoa(int n);
 ```
 
 **Description**  
-
+정수 `n`을 **문자열**로 반환해줍니다.  
 
 
 **Return**  
-
+정수 `n`을 문자로 바꾼 문자열
 
 
 **Ussage**  
-
+정수를 문자열 형태로 변환하고 싶을 때  
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
