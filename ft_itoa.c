@@ -6,19 +6,18 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:39:55 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/17 23:47:02 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/19 22:30:55 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-static	size_t	ft_intlen(int n)
+static	size_t	ft_numlen(int n)
 {
 	size_t	len;
 
-	len = 0;
-	(n < 0) ? len++ : len;
+	len = (n <= 0) ? 1 : 0;
 	while (n)
 	{
 		n /= 10;
@@ -29,25 +28,23 @@ static	size_t	ft_intlen(int n)
 
 char			*ft_itoa(int n)
 {
-	const size_t	neg = (n < 0) ? 1 : 0;
-	const size_t	int_len = ft_intlen(n);
-	size_t			i;
-	char			r;
 	char			*num;
+	char			rem;
+	size_t			i;
+	const size_t	neg = (n < 0) ? 1 : 0;
+	const size_t	num_len = ft_numlen(n);
 
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (!(num = ft_calloc(int_len + 1, sizeof(char))))
+	if (!(num = ft_calloc(num_len + 1, sizeof(char))))
 		return (NULL);
 	n = ft_abs(n);
 	i = 0;
-	while (i < int_len)
+	while (i < num_len)
 	{
-		r = n % 10;
+		rem = n % 10;
 		n = n / 10;
-		num[i] = r + '0';
+		num[i] = rem + '0';
 		i++;
 	}
 	if (neg)
