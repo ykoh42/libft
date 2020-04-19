@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:39:55 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/19 22:30:55 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/19 22:47:49 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char			*ft_itoa(int n)
 	char			*num;
 	char			rem;
 	size_t			i;
-	const size_t	neg = (n < 0) ? 1 : 0;
+	const char		neg = (n < 0) ? 1 : 0;
 	const size_t	num_len = ft_numlen(n);
 
 	if (n == INT_MIN)
