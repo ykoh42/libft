@@ -1164,7 +1164,7 @@ lstiter는 반환형이 없는 `f`를 사용하였고, lstmap은 반환형이 �
 ## EXTRA
 > 개인적으로 필요한 함수들을 모아둔 파트입니다.
 
-### ft_islower
+### ft_isspace
 > is space character
 
 **Prototype Declaration**  
