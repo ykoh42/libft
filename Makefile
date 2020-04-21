@@ -6,7 +6,7 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/04/21 20:03:34 by ykoh             ###   ########.fr        #
+#    Updated: 2020/04/21 21:08:36 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,7 @@ SRCS_BONUS	=	ft_lstadd_back.c\
 				ft_lstlast.c\
 				ft_lstmap.c\
 				ft_lstnew.c\
-				ft_lstsize.c\
-				test.c
+				ft_lstsize.c
 
 OBJS		=	$(SRCS:.c=.o)
 OBJS_BONUS	=	$(SRCS_BONUS:.c=.o)
@@ -65,10 +64,17 @@ LIB			=	ar rcs
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
-all		: 	$(NAME)
 
-bonus	: 	$(NAME) $(OBJS) $(OBJS_BONUS) $^
-			$(LIB) $^
+ifdef WITH_BONUS
+	OBJ_SWITCH = $(OBJS) $(OBJS_BONUS) 
+else
+	OBJ_SWITCH = $(OBJS)
+endif
+
+all		:	$(NAME)
+
+bonus	:
+			make WITH_BONUS=1 all
 
 clean	:
 			$(RM) $(OBJS) $(OBJS_BONUS)
@@ -78,7 +84,7 @@ fclean	:	clean
 
 re		:	fclean all
 
-$(NAME) :	$(OBJS)
+$(NAME) :	$(OBJ_SWITCH)
 			$(LIB) $@ $^
 
 .PHONY	:	all bonus clean fclean re

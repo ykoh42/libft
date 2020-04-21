@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:50:39 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/14 15:45:23 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/17 21:45:55 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ size_t				ft_strlcpy(char *restrict dst, const char *restrict src,
 size_t				ft_strlcat(char *restrict dst, const char *restrict src,
 															size_t dstsize);
 char				*ft_strchr(const char *s, int c);
-char				*strnstr(const char *haystack, const char *needle,
+char				*ft_strrchr(const char *s, int c);
+char				*ft_strnstr(const char *haystack, const char *needle,
 																size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
@@ -71,7 +72,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
 									void *(*f)(void *), void (*del)(void *));
+int					ft_isspace(int c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 size_t				ft_strnlen(const char *s, size_t maxlen);
+int					ft_abs(int i);
+char				*ft_strrev(char *str);
 #endif
