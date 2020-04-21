@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 17:14:05 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/21 14:05:15 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/21 14:14:13 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static size_t	ft_splitcnt(char const *s, char c)
 	if (!s)
 		return (0);
 	cnt = 0;
-	flg  = 1;
+	flg = 1;
 	while (*s)
 	{
 		if (*s == c)
@@ -33,7 +33,7 @@ static size_t	ft_splitcnt(char const *s, char c)
 		s++;
 	}
 	return (cnt);
-}		
+}
 
 static void		ft_free_all(char **ret, size_t splitcnt)
 {
@@ -46,22 +46,17 @@ static void		ft_free_all(char **ret, size_t splitcnt)
 char			**ft_split(char const *s, char c)
 {
 	const size_t	splitcnt = ft_splitcnt(s, c);
-	const char 		*p = s;
+	const char		*p = s;
 	char			**ret;
 	char			*end;
 	size_t			i;
 
 	if (!s || !(ret = ft_calloc(splitcnt, sizeof(char *))))
 		return (NULL);
-
 	i = 0;
 	while (i < splitcnt)
 	{
-		if (*s == c)
-		{
-			s++;	
-		}
-		else
+		if (*s != c)
 		{
 			if (!(end = ft_strchr(s, c)))
 				end = (char *)p + ft_strlen(p);
@@ -72,28 +67,7 @@ char			**ft_split(char const *s, char c)
 			}
 			s = end;
 		}
+		s++;
 	}
-
-
 	return (ret);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	size_t i = 0;
-	char *s = "      split       this for   me  !       ";
-
-//	printf("sp : %zu\n", ft_splitcnt(s, ' '));
-
-	char **result = ft_split(s, ' ');
-
-	while (i < ft_splitcnt(s, ' '))
-	{
-		printf("|%s|", result[i]);
-		i++;
-	}
-
-
 }
