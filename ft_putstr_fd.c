@@ -6,13 +6,13 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:01:22 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/16 18:05:07 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/20 02:45:27 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
