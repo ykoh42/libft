@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 17:14:05 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/21 14:14:13 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/04/21 15:29:59 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ static size_t	ft_splitcnt(char const *s, char c)
 	return (cnt);
 }
 
-static void		ft_free_all(char **ret, size_t splitcnt)
+static void		ft_freeall(char **ret)
 {
-	while (splitcnt--)
-		if (ret[splitcnt - 1] != NULL)
-			free(ret[splitcnt - 1]);
+	while (*ret)
+		if (*ret != NULL)
+			free(*ret++);
 	free(ret);
 }
 
@@ -51,7 +51,7 @@ char			**ft_split(char const *s, char c)
 	char			*end;
 	size_t			i;
 
-	if (!s || !(ret = ft_calloc(splitcnt, sizeof(char *))))
+	if (!s || !(ret = ft_calloc(splitcnt + 1, sizeof(char *))))
 		return (NULL);
 	i = 0;
 	while (i < splitcnt)
@@ -62,7 +62,7 @@ char			**ft_split(char const *s, char c)
 				end = (char *)p + ft_strlen(p);
 			if (!(ret[i++] = ft_substr(s, 0, end - s)))
 			{
-				ft_free_all(ret, splitcnt);
+				ft_freeall(ret);
 				return (NULL);
 			}
 			s = end;

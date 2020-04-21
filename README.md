@@ -747,15 +747,15 @@ char    **ft_split(char const *s, char c);
 ```
 
 **Description**  
-문자열 s1을 잘라서 새로운 문자열배열로 반환해줍니다.
+문자열 `s1`을 문자 `c`를 기준으로 잘라서, 새로운 문자열배열로 반환해줍니다.  
 
 
 **Return**  
-
+구분자를 기준으로 나뉘어진 문자열 배열  
 
 
 **Ussage**  
-
+특정 구분자를 기준으로 문자열을 쪼개고 싶을 때  
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
