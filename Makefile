@@ -6,11 +6,12 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/04/21 21:08:36 by ykoh             ###   ########.fr        #
+#    Updated: 2020/04/21 21:16:41 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=	ft_atoi.c\
+				ft_abs.c\
 				ft_bzero.c\
 				ft_calloc.c\
 				ft_isalnum.c\
@@ -18,6 +19,9 @@ SRCS		=	ft_atoi.c\
 				ft_isascii.c\
 				ft_isdigit.c\
 				ft_isprint.c\
+				ft_isspace.c\
+				ft_isupper.c\
+				ft_islower.c\
 				ft_itoa.c\
 				ft_memccpy.c\
 				ft_memchr.c\
@@ -36,6 +40,8 @@ SRCS		=	ft_atoi.c\
 				ft_strlcat.c\
 				ft_strlcpy.c\
 				ft_strlen.c\
+				ft_strnlen.c\
+				ft_strrev.c\
 				ft_strmapi.c\
 				ft_strncmp.c\
 				ft_strnstr.c\
@@ -64,7 +70,6 @@ LIB			=	ar rcs
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
-
 ifdef WITH_BONUS
 	OBJ_SWITCH = $(OBJS) $(OBJS_BONUS) 
 else
@@ -74,7 +79,7 @@ endif
 all		:	$(NAME)
 
 bonus	:
-			make WITH_BONUS=1 all
+			make WITH_BONUS=1 $(NAME)
 
 clean	:
 			$(RM) $(OBJS) $(OBJS_BONUS)
