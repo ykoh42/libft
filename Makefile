@@ -6,7 +6,7 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/04/21 21:16:41 by ykoh             ###   ########.fr        #
+#    Updated: 2020/05/02 20:45:11 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ OBJS_BONUS	=	$(SRCS_BONUS:.c=.o)
 
 NAME		=	libft.a
 RM			=	rm -f
-LIB			=	ar rcs
+LIB			=	ar rc
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
