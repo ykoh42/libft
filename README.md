@@ -1314,3 +1314,28 @@ char    *ft_strrev(char *str);
 
 ---
 
+### ft_strndup
+> string duplicate
+
+**Prototype Declaration**  
+```c
+char    *ft_strndup(const char *s1, size_t n);
+```
+
+**Description**  
+문자열 `s1`을 `n`개만큼 복제해줍니다.
+
+
+**Return**  
+복제한 문자열의 포인터
+
+
+**Ussage**  
+문자열을 원하는 갯수만큼 복제하고 싶을 때
+
+<div align = "right">
+    <b><a href = "#Contents">↥ back to top</a></b>
+</div>
+
+---
+
