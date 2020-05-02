@@ -1315,7 +1315,7 @@ char    *ft_strrev(char *str);
 ---
 
 ### ft_strndup
-> string duplicate
+> string n duplicate
 
 **Prototype Declaration**  
 ```c
