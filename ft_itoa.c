@@ -6,12 +6,11 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:39:55 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/19 22:47:49 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/05/05 00:58:34 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static	size_t	ft_numlen(int n)
 {

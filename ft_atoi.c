@@ -6,12 +6,11 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:19 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/19 22:47:22 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/05/05 00:58:23 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
