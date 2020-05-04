@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 17:14:05 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/21 15:29:59 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/05/05 00:54:00 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char			**ft_split(char const *s, char c)
 		{
 			if (!(end = ft_strchr(s, c)))
 				end = (char *)p + ft_strlen(p);
-			if (!(ret[i++] = ft_substr(s, 0, end - s)))
+			if (!(ret[i++] = ft_strndup(s, end - s)))
 			{
 				ft_freeall(ret);
 				return (NULL);

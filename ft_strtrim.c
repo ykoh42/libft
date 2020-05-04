@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:29:28 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/21 16:56:26 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/05/05 00:48:01 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break ;
 		rear--;
 	}
-	return (ft_substr(s1, 0, ++rear - s1));
+	return (ft_strndup(s1, ++rear - s1));
 }
