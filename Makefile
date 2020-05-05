@@ -6,7 +6,7 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/05/02 21:50:26 by ykoh             ###   ########.fr        #
+#    Updated: 2020/05/05 00:31:41 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS		=	ft_atoi.c\
 				ft_split.c\
 				ft_strchr.c\
 				ft_strdup.c\
+				ft_strndup.c\
 				ft_strjoin.c\
 				ft_strlcat.c\
 				ft_strlcpy.c\
@@ -83,8 +84,8 @@ all		:	$(NAME)
 
 bonus	:
 			@echo "wait.................\n";	
-			@for((i = 0;i<2000;i++));do @echo "wait" 2> /dev/null || true;done
-			make WITH_BONUS=1 $(NAME)
+			@for((i = 0;i<2000;i++)); do echo "wait" 1> /dev/null || true;done
+			@make WITH_BONUS=1 $(NAME)
 			@echo "bonus complete\n"
 clean	:
 			$(RM) $(OBJS) $(OBJS_BONUS)
