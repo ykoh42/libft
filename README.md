@@ -1055,6 +1055,8 @@ typedef struct      s_list
 }                   t_list;
 ```
 
+---
+
 ### ft_lstnew
 > list new
 
