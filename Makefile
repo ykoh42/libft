@@ -6,7 +6,7 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/05/05 00:31:41 by ykoh             ###   ########.fr        #
+#    Updated: 2020/05/06 16:20:07 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,26 +67,21 @@ OBJS_BONUS	=	$(SRCS_BONUS:.c=.o)
 
 NAME		=	libft.a
 RM			=	rm -f
-LIB			=	ar rcus
+LIB			=	ar rcu
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
 ifdef WITH_BONUS
-	OBJ_SWITCH = $(OBJS) $(OBJS_BONUS) 
+	OBJ_SWITCH = $(OBJS_BONUS) 
 else
 	OBJ_SWITCH = $(OBJS)
 endif
 
 all		:	$(NAME)
 
-##bonus	:
-##			make WITH_BONUS=1 $(NAME)
-
 bonus	:
-			@echo "wait.................\n";	
-			@for((i = 0;i<2000;i++)); do echo "wait" 1> /dev/null || true;done
-			@make WITH_BONUS=1 $(NAME)
-			@echo "bonus complete\n"
+			make WITH_BONUS=1 $(NAME)
+
 clean	:
 			$(RM) $(OBJS) $(OBJS_BONUS)
 
