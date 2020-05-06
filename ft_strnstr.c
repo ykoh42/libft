@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/04 15:18:34 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/14 14:42:34 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/05/06 02:59:05 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,20 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const size_t	needle_len = ft_strlen(needle);
+	const size_t needle_len = ft_strlen(needle);
 
-	while (*haystack && len >= needle_len)
+	if (*needle != 0)
 	{
-		if (!ft_strncmp(haystack, needle, needle_len))
-			return ((char *)haystack);
-		haystack++;
-		len--;
+		if (!len)
+			return (NULL);
+		while (len-- && ft_strncmp(haystack, needle, needle_len) != 0)
+		{
+			if (len < needle_len)
+				return (NULL);
+			if (*haystack == 0)
+				return (NULL);
+			haystack++;
+		}
 	}
-	return (NULL);
+	return ((char *)haystack);
 }
