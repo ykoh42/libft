@@ -268,7 +268,7 @@ void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t 
 
 **Description**  
 메모리 영역 `src`에서 `dst`로 `n` bytes만큼 복사하는데, `src`에서 `c`가 나타날 때까지만 복사합니다(첫번째 `c`도 복사함).
-절대 `src`와 `dst`의 메모리 영역이 `겹쳐서는 안됩니다`.
+절대 `src`와 `dst`의 메모리 영역이 **겹쳐서는 안됩니다**.
 
 
 **Return**  
