@@ -1,4 +1,4 @@
-# Welcome to the Libft!
+# Welcome to the Libft! ![score](https://img.shields.io/badge/115/100-5cb85c?style=for-the-badge) 
 > LIBFT는 42에서 필요한 라이브러리를 직접 구현한 프로젝트입니다.
 
 라이브러리가 무엇이고 왜 사용하는지에 대한 이해가 필요하시면 [*라이브러리 만들기*](https://www.joinc.co.kr/w/Site/C/Documents/Make_Library)를 참고해주세요.  
