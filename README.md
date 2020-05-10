@@ -50,7 +50,7 @@ Coding convention은 42의 convention을 따라 작성되었으며, 다음의 �
     ```
 
 ## Contents
-- [Welcome to the Libft!](#welcome-to-the-libft)
+- [Welcome to the Libft!](#welcome-to-the-libft-)
   * [Issues and pull requests](#issues-and-pull-requests)
   * [Getting started](#getting-started)
   * [Contents](#contents)
