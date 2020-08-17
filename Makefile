@@ -6,12 +6,11 @@
 #    By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/21 18:18:48 by ykoh              #+#    #+#              #
-#    Updated: 2020/05/06 16:20:07 by ykoh             ###   ########.fr        #
+#    Updated: 2020/08/17 17:20:31 by ykoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=	ft_atoi.c\
-				ft_abs.c\
 				ft_bzero.c\
 				ft_calloc.c\
 				ft_isalnum.c\

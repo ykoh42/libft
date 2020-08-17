@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 14:50:39 by ykoh              #+#    #+#             */
-/*   Updated: 2020/05/05 00:31:22 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/08/17 17:20:41 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int					ft_atoi(const char *str);
-int					ft_abs(int i);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);

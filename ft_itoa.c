@@ -12,38 +12,38 @@
 
 #include "libft.h"
 
-static	size_t	ft_numlen(int n)
+static	size_t	get_width(int n)
 {
-	size_t	len;
+	size_t	width;
 
-	len = (n <= 0) ? 1 : 0;
+	width = (n <= 0);
 	while (n)
 	{
 		n /= 10;
-		len++;
+		width++;
 	}
-	return (len);
+	return (width);
 }
 
 char			*ft_itoa(int n)
 {
 	char			*num;
-	char			rem;
+	int				rem;
 	size_t			i;
-	const char		neg = (n < 0) ? 1 : 0;
-	const size_t	num_len = ft_numlen(n);
+	const char		neg = (n < 0);
+	const size_t	width = get_width(n);
 
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	if (!(num = ft_calloc(num_len + 1, sizeof(char))))
+	if (!(num = ft_calloc(width + 1, sizeof(char))))
 		return (NULL);
-	n = ft_abs(n);
+	n = (neg) ? -n : n;
 	i = 0;
-	while (i < num_len)
+	while (i < width)
 	{
 		rem = n % 10;
 		n = n / 10;
-		num[i] = rem + '0';
+		num[i] = "0123456789"[rem];
 		i++;
 	}
 	if (neg)

@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 23:54:42 by ykoh              #+#    #+#             */
-/*   Updated: 2020/05/05 00:58:49 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/08/17 17:24:55 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 	if (n == INT_MIN)
 		return (ft_putstr_fd("2147483648", fd));
-	n = ft_abs(n);
+	n = (n < 0) ? -n : n;
 	if (n > 9)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd("0123456789"[n % 10], fd);
