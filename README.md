@@ -106,7 +106,6 @@ Coding convention은 42의 convention을 따라 작성되었으며, 다음의 �
     + [ft_islower](#ft_islower)
     + [ft_isupper](#ft_isupper)
     + [ft_strnlen](#ft_strnlen)
-    + [ft_abs](#ft_abs)
     + [ft_strrev](#ft_strrev)
     + [ft_strndup](#ft_strndup)
 
@@ -1389,30 +1388,6 @@ size_t    ft_strnlen(const char *s, size_t maxlen);
 
 **Ussage**  
 문자열의 길이를 `maxlen`까지만 알고 싶을 때
-
-<div align = "right">
-    <b><a href = "#Contents">↥ back to top</a></b>
-</div>
-
----
-
-### ft_abs
-> absolute
-
-**Prototype Declaration**  
-```c
-int    ft_abs(int n);
-```
-**Description**  
-정수 `n`에 절대값을 반환해줍니다.
-
-
-**Return**  
-정수 `n`의 절대값
-
-
-**Ussage**  
-정수의 절대값을 구하고 싶을 때
 
 <div align = "right">
     <b><a href = "#Contents">↥ back to top</a></b>
