@@ -6,13 +6,13 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 22:37:45 by ykoh              #+#    #+#             */
-/*   Updated: 2020/04/14 18:19:44 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/10/05 23:48:08 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srcsize;
 

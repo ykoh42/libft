@@ -235,7 +235,7 @@ void    *ft_memchr(const void *s, int c, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void    *ft_memcpy(void *dst, const void *src, size_t n);
 ```
 
 **Description**  
@@ -262,7 +262,7 @@ void    *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 **Prototype Declaration**  
 ```c
-void    *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+void    *ft_memccpy(void *dst, const void *src, int c, size_t n);
 ```
 
 **Description**  
@@ -365,7 +365,7 @@ size_t    ft_strlen(const char *s);
 
 **Prototype Declaration**  
 ```c
-size_t    ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t    ft_strlcpy(char *dst, const char *src, size_t dstsize);
 ```
 
 **Description**  
@@ -392,7 +392,7 @@ memcpy와 어떤차이가 있는지는 잘 모르겠습니다..
 
 **Prototype Declaration**  
 ```c
-size_t    ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t    ft_strlcat(char *dst, const char *src, size_t dstsize);
 ```
 
 **Description**  
