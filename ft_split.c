@@ -6,7 +6,7 @@
 /*   By: ykoh <ykoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 17:14:05 by ykoh              #+#    #+#             */
-/*   Updated: 2020/05/05 00:54:00 by ykoh             ###   ########.fr       */
+/*   Updated: 2020/10/06 02:18:40 by ykoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,14 @@ static size_t	ft_splitcnt(char const *s, char c)
 
 static void		ft_freeall(char **ret)
 {
-	while (*ret)
-		if (*ret != NULL)
-			free(*ret++);
+	int	i;
+
+	i = 0;
+	while (ret[i])
+	{
+		free(ret[i]);
+		i++;
+	}
 	free(ret);
 }
 
