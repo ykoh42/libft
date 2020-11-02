@@ -1269,7 +1269,7 @@ t_list    *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 
 **Description**  
-리스트를 순회하면서 `lst`에 `f`를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. 
+리스트를 순회하면서 `lst`에 `f`를 적용하고, 적용에 성공한 함수들의 리스트를 반환합니다. `(succesive를 잘못해석해서 성공한 함수를 반환하는게 아닌 것같아요 나중에 수정할게요)`
 
 
 **Return**  
